@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Ahl-Elbld</title>
+    <link rel="shortcut icon" href="img/fav.png">
+
+    <link href="css/all.min.css" rel="stylesheet"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/hover.css" rel="stylesheet"/>
+    <link href="css/animate.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
+    <link href="css/bootstrap-select.min.css" rel="stylesheet"/>
+<!--    <link href="css/styleRTL.css" rel="stylesheet" />-->
+
+</head>
+<body>
+
+<!-- Start Loading Page -->
+
+<div class="layer-preloader">
+    <img src="img/logo.png" alt="logo">
+</div>
+
+<!-- End Loading Page -->
+
+
+<!--start auth form-->
+<div class="authForm">
+    <div class="container d-flex flex-column justify-content-between align-items-center">
+        <img src="img/logo.png" class="logo" alt="logo">
+
+        <form action="activateAcc.html">
+
+            <div class="form-group">
+                <label for="familyAr">اسم الأسرة بالعربي</label>
+                <input type="text" class="form-control" id="familyAr" placeholder="برجاء ادخال اسم الأسرة">
+            </div>
+
+            <div class="form-group">
+                <label for="familyEn">اسم الأسرة بالإنجليزي</label>
+                <input type="text" class="form-control" id="familyEn" placeholder="برجاء ادخال اسم الأسرة">
+            </div>
+
+            <div class="form-group">
+                <label for="phone">رقم الجوال</label>
+                <input type="tel" class="form-control" id="phone" placeholder="برجاء ادخال رقم الجوال">
+            </div>
+
+            <div class="form-group">
+                <label for="email">البريد الالكتروني</label>
+                <input type="email" class="form-control" id="email" placeholder="برجاء ادخال البريد الالكتروني">
+            </div>
+
+            <div class="form-group">
+                <label for="commerce">السجل التجاري</label>
+                <input type="text" class="form-control" id="commerce" placeholder="برجاء ادخال السجل التجاري">
+            </div>
+
+            <div class="form-group">
+                <label for="city">المدينة</label>
+                <select class="selectpicker" id="city">
+                    <option>جدة</option>
+                    <option>مكه</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="categoryType">نوع القسم</label>
+                <select class="selectpicker" id="categoryType">
+                    <option>مطعم</option>
+                    <option>كافيه</option>
+                </select>
+            </div>
+
+
+            <div class="form-group">
+                <label for="pass">كلمة المرور</label>
+                <input type="password" class="form-control" id="pass" placeholder="برجاء ادخال كلمة المرور">
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPass">تأكيد كلمة المرور</label>
+                <input type="password" class="form-control" id="confirmPass" placeholder="برجاء ادخال كلمة المرور">
+            </div>
+
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="terms" name="terms">
+                <label class="custom-control-label subTitle" for="terms">بالتسجيل في التطبيق فأنك توافق علي <span>الشروط والأحكام</span></label>
+            </div>
+
+            <button type="submit" class="orangeBtn">تسجيل</button>
+
+        </form>
+
+        <img src="img/login_bg.png" class="footerBuilding" alt="building">
+    </div>
+</div>
+<!--end auth form-->
+
+
+
+<!-- start scroll-top-->
+<div id="scroll-top" class="text-center">
+    <i class="fas fa-angle-up"></i>
+</div>
+<!-- end scroll-top-->
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/bootstrap-select.min.js"></script>
+<script src="js/scripts.js"></script>
+
+
+<!--start select-->
+<script>
+    $('.selectpicker').selectpicker();
+</script>
+<!--end select-->
+
+<script>
+    new WOW().init();
+</script>
+
+
+</body>
+</html>

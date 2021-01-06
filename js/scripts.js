@@ -1,0 +1,133 @@
+$(document).ready(function () {
+
+    // toggle menu
+    $("header .toggle").click(function () {
+        $(".overlay").css({
+            "transform": "scaleX(1)"
+        });
+
+        $(".menu").addClass('ulDir');
+
+    });
+
+    $("header .overlay").click(function () {
+        $(this).removeAttr("style");
+        $(".menu").removeClass("ulDir");
+    });
+
+    // toggle dashboard menu
+
+    $("header .toggleSideMenu").click(function () {
+        $(".dashContent .sideMenu").toggleClass('ulDir');
+        $(".content").toggleClass('w-78 w-100');
+
+    });
+
+
+    // pay tab change
+    $('[name=tab]').each(function(i,d){
+        var p = $(this).prop('checked');
+        if(p){
+            $('.tabContent').eq(i)
+                .addClass('on');
+        }
+    });
+
+    $('[name=tab]').on('change', function(){
+        var p = $(this).prop('checked');
+
+        // $(type).index(this) == nth-of-type
+        var i = $('[name=tab]').index(this);
+
+        $('.tabContent').removeClass('on').eq(i).addClass('on');
+    });
+
+    // upload documentation photo text
+
+    $('.uploadFile').change(function() {
+        var i = $(this).prev('.custom-file-upload').clone();
+        var file = $(this)[0].files[0].name;
+        $(this).prev('#docPhoto').attr('placeholder',file);
+    });
+
+
+    // ADD IMAGE
+    $('.imageUploader').change(function (event){
+        $(this).parents('.imagesUploadBlock').append('<div class="uploadedBlock"><img src="'+ URL.createObjectURL(event.target.files[0]) +'"><button class="close"><i class="fas fa-times"></i></button></div>');
+    });
+
+    // REMOVE IMAGE
+    $('.dropBox').on('click', '.close',function (){
+        $(this).parents('.textCenter').remove();
+    });
+
+    $(".clickAdd").click(function (b){
+        b.preventDefault();
+        $('.dropBox').append('<div class="textCenter">' + '<div class="imagesUploadBlock">' + '<label class="uploadImg">' + '<span><i class="far fa-image"></i></span>' + '<input type="file" accept="image/*" class="imageUploader">' + '</label>' + '</div>' + '</div>');
+
+        $('.imageUploader').change(function (event){
+            $(this).parents('.imagesUploadBlock').append('<div class="uploadedBlock"><img src="'+ URL.createObjectURL(event.target.files[0]) +'"><button class="close"><i class="fas fa-times"></i></button></div>');
+        });
+        $('.dropBox').on('click', '.close',function (){
+            $(this).parents('.textCenter').remove();
+        });
+
+    });
+
+
+
+    // upload settings image
+    var readURL = function(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('.changeImg img').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+
+    $(".file-upload").on('change', function(){
+        readURL(this);
+    });
+
+
+    // get map location
+    $(".getLoc").click(function () {
+        let value = $("#searchTextField").val();
+        $("#location").val(value);
+    });
+
+
+    //scroll top
+    var scrollButton = $("#scroll-top");
+    $(window).scroll(function () {
+        if ($(this).scrollTop() >= 700) {
+            scrollButton.fadeIn(1000);
+        } else {
+            scrollButton.fadeOut(1000);
+        }
+    });
+
+    //click to scroll top
+    scrollButton.click(function () {
+        $('html,body').animate({scrollTop: 0}, 600);
+    });
+
+});
+
+/* loading screen */
+$(window).on('load', function () {
+
+    $(".layer-preloader").fadeOut(700, function () {
+
+        $(".lds-dual-ring").delay(1000).fadeOut(700);
+
+        $("body").css("overflow-y", "auto");
+
+    });
+
+});
