@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Ahl-Elbld</title>
+    <link rel="shortcut icon" href="img/fav.png">
+
+    <link href="css/all.min.css" rel="stylesheet"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/hover.css" rel="stylesheet"/>
+    <link href="css/animate.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <link href="css/icomoon.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/datatables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css"/>
+    <link href="css/bootstrap-select.min.css" rel="stylesheet"/>
+    <!--    <link href="css/styleRTL.css" rel="stylesheet" />-->
+
+</head>
+<body>
+
+<!-- Start Loading Page -->
+
+<div class="layer-preloader">
+    <img src="img/logo.png" alt="logo">
+</div>
+
+<!-- End Loading Page -->
+
+
+<!--  Start Header  -->
+
+<header class="dashHeader">
+    <div class="container">
+
+        <div class="menuBar d-flex d-md-none justify-content-between align-items-center">
+            <a href="index.html">
+                <img src="img/headerImg.svg" class="logo" alt="logo">
+            </a>
+            <div class="toggle">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+        </div>
+
+
+        <div class="overlay"></div>
+
+        <div class="menu d-flex justify-content-between align-items-center">
+
+            <a href="settings.html" class="user d-md-none">
+                <img src="img/pic.jpg" class="img-fluid" alt="profile">
+                <p>
+                    أماني قاسم
+                </p>
+            </a>
+
+            <a href="index.html" class="mobileLinks d-md-none">
+                <span class="icon-Home"></span>
+                <span>الرئيسية</span>
+            </a>
+
+            <a href="notifications.html" class="mobileLinks notifications d-md-none">
+                <span class="icon-notifcation"></span>
+                <span>الاشعارات</span>
+            </a>
+
+            <a href="emails.html" class="mobileLinks email d-md-none">
+                <span class="icon-email"></span>
+                <span>المراسلات</span>
+            </a>
+
+            <div class="active mobileLinks sub-menu d-md-none">
+
+                <a href="products.html">
+                    <span class="icon-product"></span>
+                    <span>ادارة المنتجات</span>
+                </a>
+
+                <ul>
+                    <li><a href='products.html'>المنتجات</a></li>
+                    <li class="active"><a href='menu.html'>المنيو او الاقسام</a></li>
+                    <li><a href='additions.html'>الاضافات</a></li>
+                </ul>
+
+            </div>
+
+
+            <a href="orders.html" class="mobileLinks d-md-none">
+                <span class="icon-orders"></span>
+                <span>ادارة الطلبات</span>
+            </a>
+
+            <a href="offers.html" class="mobileLinks d-md-none">
+                <span class="icon-Offers"></span>
+                <span>ادارة العروض</span>
+            </a>
+
+            <a href="settings.html" class="mobileLinks d-md-none">
+                <span class="icon-settings"></span>
+                <span>ادارة الملف الشخصي</span>
+            </a>
+
+            <a href="comments.html" class="mobileLinks d-md-none">
+                <span class="icon-chat"></span>
+                <span>التعليقات والتقييمات</span>
+            </a>
+
+            <a href="customersService.html" class="mobileLinks d-md-none">
+                <span class="icon-callUs"></span>
+                <span>خدمة العملاء</span>
+            </a>
+
+            <a href="financialAccounts.html" class="mobileLinks d-md-none">
+                <span class="icon-bar_chart"></span>
+                <span>خدمة الحسابات المالية</span>
+            </a>
+
+            <a href="delivery.html" class="mobileLinks d-md-none">
+                <span class="icon-delivery"></span>
+                <span>ادارة توصيل</span>
+            </a>
+
+            <a href="fastingBreakfast.html" class="orangeBtn fastingBreakfast d-md-none">
+                قسم افطار صائم
+            </a>
+
+
+
+            <div class="rightDiv">
+                <a href="index.html" class="d-none d-md-block">
+                    <img src="img/headerImg.svg" class="logo" alt="logo">
+                </a>
+
+                <a class="toggleSideMenu d-none d-md-block">
+                    <span class="icon-menu"></span>
+                </a>
+            </div>
+
+            <div class="leftDiv d-flex align-items-center">
+
+                <a href="emails.html" class="email d-none d-md-flex">
+                    <span class="icon-email"></span>
+                </a>
+
+                <a href="#" class="lang d-none d-md-flex">
+                    <span class="icon-language"></span>
+                    <span>En</span>
+                </a>
+
+                <a href="notifications.html" class="notifications d-none d-md-flex">
+                    <span class="icon-notifcation"></span>
+                </a>
+
+                <div class="profile d-none d-md-flex">
+                    <img class="img-fluid" src="img/pic.jpg" alt="profile">
+                    <span class="icon-arrow_down"></span>
+                    <ul>
+                        <li><a href="wallet.html">المحفظة</a></li>
+                        <li><a href="login.html">تسجيل خروج</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</header>
+<!--end header-->
+
+<!--start dashboard content-->
+<div class="dashContent d-flex">
+    <div class="sideMenu d-none d-md-block">
+
+        <div class="restInfo">
+            <img class="img-fluid" src="img/pic.jpg" alt="profile">
+            <span>اسم المطعم</span>
+        </div>
+
+        <ul class="mainUl">
+
+            <li>
+                <a href="index.html">
+                    <span class="icon-Home"></span>
+                    الرئيسية
+                </a>
+            </li>
+
+            <li class="active sub-menu">
+                <a href="products.html">
+                    <span class="icon-product"></span>
+                    ادارة المنتجات
+                </a>
+                <ul>
+                    <li><a href='incomingOrders.html'>المنتجات</a></li>
+                    <li class="active"><a href='menu.html'>المنيو او الاقسام</a></li>
+                    <li><a href='additions.html'>الاضافات</a></li>
+                </ul>
+            </li>
+
+
+            <li>
+                <a href="orders.html">
+                    <span class="icon-orders"></span>
+                    ادارة الطلبات
+                </a>
+            </li>
+
+            <li>
+                <a href="offers.html">
+                    <span class="icon-Offers"></span>
+                    ادارة العروض
+                </a>
+            </li>
+
+            <li>
+                <a href="settings.html">
+                    <span class="icon-settings"></span>
+                    ادارة الملف الشخصي
+                </a>
+            </li>
+
+            <li>
+                <a href="comments.html">
+                    <span class="icon-chat"></span>
+                    التعليقات والتقييمات
+                </a>
+            </li>
+
+            <li>
+                <a href="customersService.html">
+                    <span class="icon-callUs"></span>
+                    خدمة العملاء
+                </a>
+            </li>
+
+            <li>
+                <a href="financialAccounts.html">
+                    <span class="icon-bar_chart"></span>
+                    ادارة الحسابات المالية
+                </a>
+            </li>
+
+            <li>
+                <a href="delivery.html">
+                    <span class="icon-delivery"></span>
+                    ادارة توصيل
+                </a>
+            </li>
+
+            <li>
+                <a href="fastingBreakfast.html" class="orangeBtn fastingBreakfast">
+                    قسم افطار صائم
+                </a>
+            </li>
+
+        </ul>
+    </div>
+    <div class="content w-78">
+        <div class="container">
+
+            <div class="mainOrders">
+
+                <div class="blackBox">
+                    <img src="img/received.png" alt="orders">
+                    <div>
+                        <h3>100</h3>
+                        <h3>الطلبات الواردة</h3>
+                    </div>
+                </div>
+
+                <div class="blackBox">
+                    <span class="icon-paper"></span>
+                    <div>
+                        <h3>100</h3>
+                        <h3>الطلبات النشطة</h3>
+                    </div>
+                </div>
+
+                <div class="blackBox">
+                    <span class="icon-paper"></span>
+                    <div>
+                        <h3>100</h3>
+                        <h3>الطلبات المنتهية</h3>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="filterDiv flex-column flex-sm-row justify-content-center justify-content-lg-between ">
+
+                <div class="d-flex align-items-center filterBox">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="selectAll">
+                        <label class="custom-control-label" for="selectAll">تحديد الكل</label>
+                    </div>
+
+                    <select class="selectpicker" id="allFilter">
+                        <option>حذف</option>
+                        <option>تعطيل</option>
+                    </select>
+                </div>
+
+                <div class="filterSort">
+                    فلتر حسب
+                    <select class="selectpicker" id="selectFilter">
+                        <option>الأحدث</option>
+                        <option>الاقدم</option>
+                    </select>
+                </div>
+
+                <a class="addMenu" data-toggle="modal" data-target="#addMenu">
+                    <i class="fas fa-plus"></i>
+                </a>
+
+                <!-- Modal -->
+                <div class="modal fade" id="addMenu" tabindex="-1" role="dialog" aria-labelledby="addMenuTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header border-0 pb-0">
+                                <h5 class="modal-title" id="exampleModalLongTitle">اضافة منيو</h5>
+                            </div>
+                            <div class="modal-body">
+                                <form action="" class="flex-column">
+
+                                    <div class="form-group w-100 mb-3">
+                                        <input type="text" class="form-control" id="nameAr" placeholder="اسم المنيو عربي">
+                                    </div>
+
+                                    <div class="form-group w-100 mb-5">
+                                        <input type="text" class="form-control" id="nameEn" placeholder="اسم المنيو انجليزي">
+                                    </div>
+
+                                    <button type="submit" class="orangeBtn align-self-end m-0" data-dismiss="modal">اضافة</button>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="tableContainer">
+                <table id="menuTable" class="display nowrap" >
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th>رقم</th>
+                        <th>اسم المنيو</th>
+                        <th>تعديل</th>
+                        <th>حذف</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    <tr>
+                        <td>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                <label class="custom-control-label" for="customCheck1"/>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td>اسم المنيو</td>
+                        <td>
+                             <a data-toggle="modal" data-target="#addMenu" class="edit">تعديل</a>
+                        </td>
+                        <td>
+                            <a href="#" class="delete">حذف</a>
+                        </td>
+                        <td>
+                            <a href="#" class="more">
+                                <span class="icon-more"></span>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                <label class="custom-control-label" for="customCheck2"/>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td>اسم المنيو</td>
+                        <td>
+                             <a data-toggle="modal" data-target="#addMenu" class="edit">تعديل</a>
+                        </td>
+                        <td>
+                            <a href="#" class="delete">حذف</a>
+                        </td>
+                        <td>
+                            <a href="#" class="more">
+                                <span class="icon-more"></span>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                <label class="custom-control-label" for="customCheck3"/>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td>اسم المنيو</td>
+                        <td>
+                             <a data-toggle="modal" data-target="#addMenu" class="edit">تعديل</a>
+                        </td>
+                        <td>
+                            <a href="#" class="delete">حذف</a>
+                        </td>
+                        <td>
+                            <a href="#" class="more">
+                                <span class="icon-more"></span>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                <label class="custom-control-label" for="customCheck4"/>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td>اسم المنيو</td>
+                        <td>
+                             <a data-toggle="modal" data-target="#addMenu" class="edit">تعديل</a>
+                        </td>
+                        <td>
+                            <a href="#" class="delete">حذف</a>
+                        </td>
+                        <td>
+                            <a href="#" class="more">
+                                <span class="icon-more"></span>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck5">
+                                <label class="custom-control-label" for="customCheck5"/>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td>اسم المنيو</td>
+                        <td>
+                             <a data-toggle="modal" data-target="#addMenu" class="edit">تعديل</a>
+                        </td>
+                        <td>
+                            <a href="#" class="delete">حذف</a>
+                        </td>
+                        <td>
+                            <a href="#" class="more">
+                                <span class="icon-more"></span>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck7">
+                                <label class="custom-control-label" for="customCheck7"/>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td>اسم المنيو</td>
+                        <td>
+                             <a data-toggle="modal" data-target="#addMenu" class="edit">تعديل</a>
+                        </td>
+                        <td>
+                            <a href="#" class="delete">حذف</a>
+                        </td>
+                        <td>
+                            <a href="#" class="more">
+                                <span class="icon-more"></span>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck8">
+                                <label class="custom-control-label" for="customCheck8"/>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td>اسم المنيو</td>
+                        <td>
+                             <a data-toggle="modal" data-target="#addMenu" class="edit">تعديل</a>
+                        </td>
+                        <td>
+                            <a href="#" class="delete">حذف</a>
+                        </td>
+                        <td>
+                            <a href="#" class="more">
+                                <span class="icon-more"></span>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck9">
+                                <label class="custom-control-label" for="customCheck9"/>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td>اسم المنيو</td>
+                        <td>
+                             <a data-toggle="modal" data-target="#addMenu" class="edit">تعديل</a>
+                        </td>
+                        <td>
+                            <a href="#" class="delete">حذف</a>
+                        </td>
+                        <td>
+                            <a href="#" class="more">
+                                <span class="icon-more"></span>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck10">
+                                <label class="custom-control-label" for="customCheck10"/>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td>اسم المنيو</td>
+                        <td>
+                             <a data-toggle="modal" data-target="#addMenu" class="edit">تعديل</a>
+                        </td>
+                        <td>
+                            <a href="#" class="delete">حذف</a>
+                        </td>
+                        <td>
+                            <a href="#" class="more">
+                                <span class="icon-more"></span>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck11">
+                                <label class="custom-control-label" for="customCheck11"/>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td>اسم المنيو</td>
+                        <td>
+                             <a data-toggle="modal" data-target="#addMenu" class="edit">تعديل</a>
+                        </td>
+                        <td>
+                            <a href="#" class="delete">حذف</a>
+                        </td>
+                        <td>
+                            <a href="#" class="more">
+                                <span class="icon-more"></span>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck12">
+                                <label class="custom-control-label" for="customCheck12"/>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td>اسم المنيو</td>
+                        <td>
+                             <a data-toggle="modal" data-target="#addMenu" class="edit">تعديل</a>
+                        </td>
+                        <td>
+                            <a href="#" class="delete">حذف</a>
+                        </td>
+                        <td>
+                            <a href="#" class="more">
+                                <span class="icon-more"></span>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck13">
+                                <label class="custom-control-label" for="customCheck13"/>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td>اسم المنيو</td>
+                        <td>
+                             <a data-toggle="modal" data-target="#addMenu" class="edit">تعديل</a>
+                        </td>
+                        <td>
+                            <a href="#" class="delete">حذف</a>
+                        </td>
+                        <td>
+                            <a href="#" class="more">
+                                <span class="icon-more"></span>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck14">
+                                <label class="custom-control-label" for="customCheck14"/>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td>اسم المنيو</td>
+                        <td>
+                             <a data-toggle="modal" data-target="#addMenu" class="edit">تعديل</a>
+                        </td>
+                        <td>
+                            <a href="#" class="delete">حذف</a>
+                        </td>
+                        <td>
+                            <a href="#" class="more">
+                                <span class="icon-more"></span>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck15">
+                                <label class="custom-control-label" for="customCheck15"/>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td>اسم المنيو</td>
+                        <td>
+                             <a data-toggle="modal" data-target="#addMenu" class="edit">تعديل</a>
+                        </td>
+                        <td>
+                            <a href="#" class="delete">حذف</a>
+                        </td>
+                        <td>
+                            <a href="#" class="more">
+                                <span class="icon-more"></span>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck16">
+                                <label class="custom-control-label" for="customCheck16"/>
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td>اسم المنيو</td>
+                        <td>
+                             <a data-toggle="modal" data-target="#addMenu" class="edit">تعديل</a>
+                        </td>
+                        <td>
+                            <a href="#" class="delete">حذف</a>
+                        </td>
+                        <td>
+                            <a href="#" class="more">
+                                <span class="icon-more"></span>
+                            </a>
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<!--end dashboard content-->
+
+
+<!-- start scroll-top-->
+<div id="scroll-top" class="text-center">
+    <i class="fas fa-angle-up"></i>
+</div>
+<!-- end scroll-top-->
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/datatables.min.js"></script>
+<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+<script src="js/bootstrap-select.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/scripts.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#menuTable').DataTable( {
+            "language": {
+                "paginate": {
+                    "next": '<i class="fas fa-chevron-left"></i>',
+                    "previous": '<i class="fas fa-chevron-right"></i>',
+                }
+            },
+            "scrollY": 200,
+            "scrollX": true
+        } );
+    } );
+</script>
+
+<!--start select-->
+<script>
+    $('.selectpicker').selectpicker();
+</script>
+<!--end select-->
+
+
+<script>
+    new WOW().init();
+</script>
+
+
+</body>
+</html>

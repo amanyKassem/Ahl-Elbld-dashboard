@@ -15,7 +15,7 @@
     <link href="css/icomoon.css" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
-<!--    <link href="css/styleRTL.css" rel="stylesheet" />-->
+    <!--    <link href="css/styleRTL.css" rel="stylesheet" />-->
 
 </head>
 <body>
@@ -51,11 +51,11 @@
             <a href="settings.html" class="user d-md-none">
                 <img src="img/pic.jpg" class="img-fluid" alt="profile">
                 <p>
-                   أماني قاسم
+                    أماني قاسم
                 </p>
             </a>
 
-            <a href="index.html" class="active mobileLinks d-md-none">
+            <a href="index.html" class="mobileLinks d-md-none">
                 <span class="icon-Home"></span>
                 <span>الرئيسية</span>
             </a>
@@ -70,7 +70,7 @@
                 <span>المراسلات</span>
             </a>
 
-            <a href="products.html" class="mobileLinks d-md-none">
+            <a href="emails.html" class="mobileLinks email d-md-none">
                 <span class="icon-product"></span>
                 <span>ادارة المنتجات</span>
             </a>
@@ -85,10 +85,19 @@
                 <span>ادارة العروض</span>
             </a>
 
-            <a href="settings.html" class="mobileLinks d-md-none">
-                <span class="icon-settings"></span>
-                <span>ادارة الملف الشخصي</span>
-            </a>
+            <div class="active mobileLinks sub-menu d-md-none">
+
+                <a href="settings.html">
+                    <span class="icon-settings"></span>
+                    <span>ادارة الملف الشخصي</span>
+                </a>
+
+                <ul>
+                    <li class="active"><a href='settings.html'>الملف الشخصي</a></li>
+                    <li><a href='restInfo.html'>معلومات المطعم</a></li>
+                </ul>
+
+            </div>
 
             <a href="comments.html" class="mobileLinks d-md-none">
                 <span class="icon-chat"></span>
@@ -169,7 +178,7 @@
 
         <ul class="mainUl">
 
-            <li class="active">
+            <li>
                 <a href="index.html">
                     <span class="icon-Home"></span>
                     الرئيسية
@@ -182,6 +191,7 @@
                     ادارة المنتجات
                 </a>
             </li>
+
 
             <li>
                 <a href="orders.html">
@@ -197,11 +207,16 @@
                 </a>
             </li>
 
-            <li>
+
+            <li class="active sub-menu">
                 <a href="settings.html">
                     <span class="icon-settings"></span>
                     ادارة الملف الشخصي
                 </a>
+                <ul>
+                    <li class="active"><a href='settings.html'>الملف الشخصي</a></li>
+                    <li><a href='restInfo.html'>معلومات المطعم</a></li>
+                </ul>
             </li>
 
             <li>
@@ -237,7 +252,7 @@
                     قسم افطار صائم
                 </a>
             </li>
-            
+
         </ul>
     </div>
     <div class="content w-78">
@@ -271,90 +286,33 @@
 
             </div>
 
+            <div class="filterDiv rightBorder">
+                <h3>الملف الشخصي</h3>
+            </div>
 
-            <div class="latestProducts">
-                <h3><span>أحدث المنتجات</span></h3>
-                
-                <div class="products">
+            <div class="filterDiv flex-column p-lg-5">
+                <form class="settingForm" action="">
 
-                    <a href="product.html" class="product">
-                        <img src="img/product.jpg" alt="product">
-                        <div class="info">
-                            <h5>اسم المنتج</h5>
-                            <h5>500 رس</h5>
-                        </div>
-                    </a>
+                    <div class="form-group">
+                        <label for="phone">رقم الجوال</label>
+                        <input type="tel" class="form-control" id="phone" value="0123456789">
+                        <img src="img/edit.png" alt="edit">
+                    </div>
 
-                    <a href="product.html" class="product">
-                        <img src="img/product.jpg" alt="product">
-                        <div class="info">
-                            <h5>اسم المنتج</h5>
-                            <h5>500 رس</h5>
-                        </div>
-                    </a>
+                    <div class="form-group">
+                        <label for="email">البريد الالكتروني</label>
+                        <input type="email" class="form-control" id="email" value="amany@gmail.com">
+                        <img src="img/edit.png" alt="edit">
+                    </div>
 
-                    <a href="product.html" class="product">
-                        <img src="img/product.jpg" alt="product">
-                        <div class="info">
-                            <h5>اسم المنتج</h5>
-                            <h5>500 رس</h5>
-                        </div>
-                    </a>
+                    <button type="submit" class="orangeBtn w-75 mb-4 mt-2">حفظ</button>
 
-                    <a href="product.html" class="product">
-                        <img src="img/product.jpg" alt="product">
-                        <div class="info">
-                            <h5>اسم المنتج</h5>
-                            <h5>500 رس</h5>
-                        </div>
-                    </a>
+                    <a href="" class="orangeTxt">تعديل كلمة المرور</a>
 
-                    <a href="product.html" class="product">
-                        <img src="img/product.jpg" alt="product">
-                        <div class="info">
-                            <h5>اسم المنتج</h5>
-                            <h5>500 رس</h5>
-                        </div>
-                    </a>
-
-                </div>
+                </form>
 
             </div>
-            
-            
-            <div class="mainInfo">
-                
-                <div class="whiteBox">
-                    <div class="orangeBg">
-                        <img src="img/order.svg" alt="products">
-                    </div>
-                    <div class="info">
-                        <h3>المنتجات</h3>
-                        <h3>100</h3>
-                    </div>
-                </div>
 
-                <div class="whiteBox">
-                    <div class="orangeBg">
-                        <img src="img/coment.svg" alt="comments">
-                    </div>
-                    <div class="info">
-                        <h3>التعليقات</h3>
-                        <h3>100</h3>
-                    </div>
-                </div>
-
-                <div class="whiteBox">
-                    <div class="orangeBg">
-                        <img src="img/star.svg" alt="rates">
-                    </div>
-                    <div class="info">
-                        <h3>التقييمات</h3>
-                        <h3>100</h3>
-                    </div>
-                </div>
-                
-            </div>
 
         </div>
     </div>

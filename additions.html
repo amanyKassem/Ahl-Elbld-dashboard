@@ -15,7 +15,10 @@
     <link href="css/icomoon.css" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
-<!--    <link href="css/styleRTL.css" rel="stylesheet" />-->
+    <link rel="stylesheet" type="text/css" href="css/datatables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css"/>
+    <link href="css/bootstrap-select.min.css" rel="stylesheet"/>
+    <!--    <link href="css/styleRTL.css" rel="stylesheet" />-->
 
 </head>
 <body>
@@ -51,11 +54,11 @@
             <a href="settings.html" class="user d-md-none">
                 <img src="img/pic.jpg" class="img-fluid" alt="profile">
                 <p>
-                   أماني قاسم
+                    أماني قاسم
                 </p>
             </a>
 
-            <a href="index.html" class="active mobileLinks d-md-none">
+            <a href="index.html" class="mobileLinks d-md-none">
                 <span class="icon-Home"></span>
                 <span>الرئيسية</span>
             </a>
@@ -70,10 +73,21 @@
                 <span>المراسلات</span>
             </a>
 
-            <a href="products.html" class="mobileLinks d-md-none">
-                <span class="icon-product"></span>
-                <span>ادارة المنتجات</span>
-            </a>
+            <div class="active mobileLinks sub-menu d-md-none">
+
+                <a href="products.html">
+                    <span class="icon-product"></span>
+                    <span>ادارة المنتجات</span>
+                </a>
+
+                <ul>
+                    <li><a href='products.html'>المنتجات</a></li>
+                    <li><a href='menu.html'>المنيو او الاقسام</a></li>
+                    <li class="active"><a href='additions.html'>الاضافات</a></li>
+                </ul>
+
+            </div>
+
 
             <a href="orders.html" class="mobileLinks d-md-none">
                 <span class="icon-orders"></span>
@@ -169,19 +183,25 @@
 
         <ul class="mainUl">
 
-            <li class="active">
+            <li>
                 <a href="index.html">
                     <span class="icon-Home"></span>
                     الرئيسية
                 </a>
             </li>
 
-            <li>
+            <li class="active sub-menu">
                 <a href="products.html">
                     <span class="icon-product"></span>
                     ادارة المنتجات
                 </a>
+                <ul>
+                    <li><a href='incomingOrders.html'>المنتجات</a></li>
+                    <li><a href='menu.html'>المنيو او الاقسام</a></li>
+                    <li class="active"><a href='additions.html'>الاضافات</a></li>
+                </ul>
             </li>
+
 
             <li>
                 <a href="orders.html">
@@ -237,7 +257,7 @@
                     قسم افطار صائم
                 </a>
             </li>
-            
+
         </ul>
     </div>
     <div class="content w-78">
@@ -272,89 +292,143 @@
             </div>
 
 
-            <div class="latestProducts">
-                <h3><span>أحدث المنتجات</span></h3>
-                
-                <div class="products">
+            <div class="filterDiv flex-column flex-sm-row justify-content-center justify-content-lg-between ">
 
-                    <a href="product.html" class="product">
-                        <img src="img/product.jpg" alt="product">
-                        <div class="info">
-                            <h5>اسم المنتج</h5>
-                            <h5>500 رس</h5>
+                <div class="d-flex align-items-center filterBox">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="selectAll">
+                        <label class="custom-control-label" for="selectAll">تحديد الكل</label>
+                    </div>
+
+                    <select class="selectpicker" id="allFilter">
+                        <option>حذف</option>
+                        <option>تعطيل</option>
+                    </select>
+                </div>
+
+                <div class="filterSort">
+                    فلتر حسب
+                    <select class="selectpicker" id="selectFilter">
+                        <option>الأحدث</option>
+                        <option>الاقدم</option>
+                    </select>
+                </div>
+
+                <a class="addMenu" data-toggle="modal" data-target="#addAddition">
+                    <i class="fas fa-plus"></i>
+                </a>
+
+                <!-- Modal -->
+                <div class="modal fade" id="addAddition" tabindex="-1" role="dialog" aria-labelledby="addAdditionTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle2">الاضافات</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span class="icon-close"></span>
+                                </button>
+                            </div>
+                            <div class="modal-body pb-0">
+                                <form action="">
+
+                                    <div class="form-group">
+                                        <label for="additionNameAr">اسم الاضافة بالعربي</label>
+                                        <input type="text" class="form-control" id="additionNameAr">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="additionNameEn">اسم الاضافة بالانجليزي</label>
+                                        <input type="text" class="form-control" id="additionNameEn">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="additionPrice">السعر</label>
+                                        <input type="text" class="form-control" id="additionPrice">
+                                    </div>
+
+                                </form>
+                            </div>
+                            <div class="modal-footer pt-0">
+                                <button type="submit" class="orangeBtn" data-dismiss="modal">اضافة</button>
+                            </div>
                         </div>
-                    </a>
-
-                    <a href="product.html" class="product">
-                        <img src="img/product.jpg" alt="product">
-                        <div class="info">
-                            <h5>اسم المنتج</h5>
-                            <h5>500 رس</h5>
-                        </div>
-                    </a>
-
-                    <a href="product.html" class="product">
-                        <img src="img/product.jpg" alt="product">
-                        <div class="info">
-                            <h5>اسم المنتج</h5>
-                            <h5>500 رس</h5>
-                        </div>
-                    </a>
-
-                    <a href="product.html" class="product">
-                        <img src="img/product.jpg" alt="product">
-                        <div class="info">
-                            <h5>اسم المنتج</h5>
-                            <h5>500 رس</h5>
-                        </div>
-                    </a>
-
-                    <a href="product.html" class="product">
-                        <img src="img/product.jpg" alt="product">
-                        <div class="info">
-                            <h5>اسم المنتج</h5>
-                            <h5>500 رس</h5>
-                        </div>
-                    </a>
-
+                    </div>
                 </div>
 
             </div>
-            
-            
-            <div class="mainInfo">
-                
-                <div class="whiteBox">
-                    <div class="orangeBg">
-                        <img src="img/order.svg" alt="products">
-                    </div>
-                    <div class="info">
-                        <h3>المنتجات</h3>
-                        <h3>100</h3>
-                    </div>
-                </div>
 
-                <div class="whiteBox">
-                    <div class="orangeBg">
-                        <img src="img/coment.svg" alt="comments">
-                    </div>
-                    <div class="info">
-                        <h3>التعليقات</h3>
-                        <h3>100</h3>
-                    </div>
-                </div>
+            <div class="tableContainer">
+                <table id="menuTable" class="display nowrap" >
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th>اسم الاضافه بالعربي</th>
+                        <th>اسم الاضافه بالانجليزي</th>
+                        <th>السعر</th>
+                        <th>تعديل</th>
+                        <th>حذف</th>
+                    </tr>
+                    </thead>
+                    <tbody>
 
-                <div class="whiteBox">
-                    <div class="orangeBg">
-                        <img src="img/star.svg" alt="rates">
-                    </div>
-                    <div class="info">
-                        <h3>التقييمات</h3>
-                        <h3>100</h3>
-                    </div>
-                </div>
-                
+                    <tr>
+                        <td>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                <label class="custom-control-label" for="customCheck1"/>
+                            </div>
+                        </td>
+                        <td>بطاطس</td>
+                        <td>boatato</td>
+                        <td>20 ريال</td>
+                        <td>
+                            <a data-toggle="modal" data-target="#addAddition" class="edit">تعديل</a>
+                        </td>
+                        <td>
+                            <a href="#" class="delete">حذف</a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                <label class="custom-control-label" for="customCheck2"/>
+                            </div>
+                        </td>
+                        <td>بطاطس</td>
+                        <td>boatato</td>
+                        <td>20 ريال</td>
+                        <td>
+                            <a data-toggle="modal" data-target="#addAddition" class="edit">تعديل</a>
+                        </td>
+                        <td>
+                            <a href="#" class="delete">حذف</a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                <label class="custom-control-label" for="customCheck3"/>
+                            </div>
+                        </td>
+                        <td>بطاطس</td>
+                        <td>boatato</td>
+                        <td>20 ريال</td>
+                        <td>
+                            <a data-toggle="modal" data-target="#addAddition" class="edit">تعديل</a>
+                        </td>
+                        <td>
+                            <a href="#" class="delete">حذف</a>
+                        </td>
+                    </tr>
+
+                    </tbody>
+                </table>
             </div>
+
 
         </div>
     </div>
@@ -371,8 +445,33 @@
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/datatables.min.js"></script>
+<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
+<script src="js/bootstrap-select.min.js"></script>
 <script src="js/wow.min.js"></script>
 <script src="js/scripts.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#menuTable').DataTable( {
+            "language": {
+                "paginate": {
+                    "next": '<i class="fas fa-chevron-left"></i>',
+                    "previous": '<i class="fas fa-chevron-right"></i>',
+                }
+            },
+            "scrollY": 200,
+            "scrollX": true
+        } );
+    } );
+</script>
+
+<!--start select-->
+<script>
+    $('.selectpicker').selectpicker();
+</script>
+<!--end select-->
+
+
 <script>
     new WOW().init();
 </script>

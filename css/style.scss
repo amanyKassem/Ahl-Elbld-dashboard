@@ -113,6 +113,48 @@ form {
 
   }
 
+  .bootstrap-select{
+    &.show-tick{
+      .dropdown-menu {
+        li {
+          a{
+            span{
+              &.text {
+                display: flex;
+                justify-content: space-between;
+                color: $gray;
+                small{
+                  color: $gray !important;
+                }
+              }
+            }
+
+            &:hover{
+              span{
+                &.text {
+                 width: 100%;
+                  color: #fff;
+                  small{
+                    color: #fff !important;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .selected{
+          span{
+            &.check-mark {
+              top: 50%;
+              transform: translateY(-50%);
+            }
+          }
+        }
+      }
+    }
+  }
+
 }
 
 textarea{
@@ -1154,6 +1196,12 @@ body {
             color: $gray;
             font-weight: bold;
             margin-bottom: 0;
+
+            a{
+              display: inline-flex;
+              color: $gray;
+            }
+
           }
         }
 
@@ -1197,9 +1245,9 @@ body {
         .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn), .bootstrap-select > .dropdown-toggle {
           width: 110px;
           height: 40px;
-          font-size: 15px;
-          background-color: #f7f7f7;
-          color: $lightGray;
+          font-size: 15px !important;
+          background-color: #f7f7f7 !important;
+          color: $lightGray !important;
 
           > .dropdown-toggle.bs-placeholder, > .dropdown-toggle.bs-placeholder:active, > .dropdown-toggle.bs-placeholder:focus,
           > .dropdown-toggle.bs-placeholder:hover {
@@ -1298,7 +1346,7 @@ body {
 
           }
 
-          &#addProduc{
+          &#addProduc , &#addAddition{
             .modal-content {
               padding: 0;
               border: 0;
@@ -1377,12 +1425,12 @@ body {
 
                   .add {
                     color: $orange;
-                    font-size: 20px;
-                    margin: 60px 0 30px;
+                    font-size: 18px;
+                    margin: 20px 0;
                     width: fit-content;
                      i{
-                       width: 35px;
-                       height: 35px;
+                       width: 30px;
+                       height: 30px;
                        background: $orange;
                        color: #fff;
                        display: flex;
@@ -1390,7 +1438,7 @@ body {
                        margin-left: 20px;
                        justify-content: center;
                        border-radius: 7px;
-                       font-size: 25px;
+                       font-size: 20px;
                        border: 1px solid transparent;
                        transition: all 0.5s ease-in-out;
                        -o-transition: all 0.5s ease-in-out;
@@ -1914,11 +1962,21 @@ body {
             color: #fff;
             display: flex;
             flex-direction: column;
-            margin: 23px auto;
+            margin: 25px auto;
             padding: 20px;
             border-radius: 10px;
             line-height: 28px;
             font-size: 15px;
+          }
+
+          .onlineInfo{
+            margin: 25px auto;
+            display: flex;
+            align-items: center;
+            img{
+              margin-left: 15px;
+              width: 45px;
+            }
           }
 
           form {
@@ -3001,7 +3059,7 @@ body {
               min-width: unset !important;
             }
 
-            &#addProduc {
+            &#addProduc , &#addAddition {
               .modal-content {
                 .modal-header {
                   padding: 15px 20px;
@@ -3053,6 +3111,10 @@ body {
 
                   }
                 }
+
+                .modal-footer {
+                  padding: 20px;
+                }
               }
             }
 
@@ -3069,6 +3131,18 @@ body {
           .balance {
             width: 180px;
             font-size: 18px;
+          }
+
+          .tabContent {
+            .cardInfo {
+              font-size: 14px;
+            }
+
+            .onlineInfo {
+              img {
+                width: 35px;
+              }
+            }
           }
 
         }
