@@ -15,9 +15,6 @@
     <link href="css/icomoon.css" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/datatables.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css"/>
-    <link href="css/bootstrap-select.min.css" rel="stylesheet"/>
     <!--    <link href="css/styleRTL.css" rel="stylesheet" />-->
 
 </head>
@@ -73,7 +70,7 @@
                 <span>المراسلات</span>
             </a>
 
-            <a href="emails.html" class="mobileLinks d-md-none">
+            <a href="products.html" class="mobileLinks d-md-none">
                 <span class="icon-product"></span>
                 <span>ادارة المنتجات</span>
             </a>
@@ -83,19 +80,10 @@
                 <span>ادارة الطلبات</span>
             </a>
 
-            <div class="active mobileLinks sub-menu d-md-none">
-
-                <a href="offers.html">
-                    <span class="icon-Offers"></span>
-                    <span>ادارة العروض</span>
-                </a>
-
-                <ul>
-                    <li><a href='offers.html'>اضافة صورة</a></li>
-                    <li class="active"><a href='previousOffers.html'>العروض السابقة</a></li>
-                </ul>
-
-            </div>
+            <a href="offers.html" class="mobileLinks d-md-none">
+                <span class="icon-Offers"></span>
+                <span>ادارة العروض</span>
+            </a>
 
             <a href="settings.html" class="mobileLinks d-md-none">
                 <span class="icon-settings"></span>
@@ -112,7 +100,7 @@
                 <span>خدمة العملاء</span>
             </a>
 
-            <a href="financialAccounts.html" class="mobileLinks d-md-none">
+            <a href="financialAccounts.html" class="active mobileLinks d-md-none">
                 <span class="icon-bar_chart"></span>
                 <span>خدمة الحسابات المالية</span>
             </a>
@@ -195,7 +183,6 @@
                 </a>
             </li>
 
-
             <li>
                 <a href="orders.html">
                     <span class="icon-orders"></span>
@@ -203,15 +190,11 @@
                 </a>
             </li>
 
-            <li class="active sub-menu">
+            <li>
                 <a href="offers.html">
                     <span class="icon-Offers"></span>
                     ادارة العروض
                 </a>
-                <ul>
-                    <li><a href='offers.html'>اضافة صورة</a></li>
-                    <li class="active"><a href='previousOffers.html'>العروض السابقة</a></li>
-                </ul>
             </li>
 
             <li>
@@ -235,7 +218,7 @@
                 </a>
             </li>
 
-            <li>
+            <li class="active">
                 <a href="financialAccounts.html">
                     <span class="icon-bar_chart"></span>
                     ادارة الحسابات المالية
@@ -288,124 +271,98 @@
 
             </div>
 
-            <div class="filterDiv">
+            <div class="notifications">
 
-            <div class="d-flex align-items-center filterBox">
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="selectAll">
-                    <label class="custom-control-label" for="selectAll">تحديد الكل</label>
+                <div class="headTitle bgWhite mb-3">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb m-0">
+                            <li class="breadcrumb-item"><a href="financialAccounts.html">المبيعات</a></li>
+                            <li class="breadcrumb-item"><a href="financialAccs.html"><i class='fas fa-chevron-left'></i>ادارة الحسابات المالية</a></li>
+                            <li class="breadcrumb-item active" aria-current="page"><i class='fas fa-chevron-left'></i>الطلب</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="orderDetTable table-responsive">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">رقم الطلب</th>
+                        <th scope="col">اسم المنتج</th>
+                        <th scope="col">الكمية</th>
+                        <th scope="col">توصيل</th>
+                        <th scope="col">عمولة</th>
+                        <th scope="col">السعر الاجمالي</th>
+                        <th scope="col">الحالة</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>#12345</td>
+                        <td>بيتزا</td>
+                        <td>60 رس</td>
+                        <td>60 رس</td>
+                        <td>0 رس</td>
+                        <td>0 رس</td>
+                        <td class="accepted">تمت التسوية</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="filterDiv p-0 flex-column">
+                <div class="anotherDet">
+                    <h4>تفاصيل اخري</h4>
+                </div>
+                <div class="payMethods">
+                    <div>
+                        <h3>طريقة الدفع</h3>
+                        <h3>الدفع عند الاستلام</h3>
+                    </div>
+                    <div>
+                        <h3>تفاصيل التسليم</h3>
+                        <h3>الرياض - المملكة العربية السعودية</h3>
+                    </div>
+                </div>
+                <div class="payMethods align-items-start pt-4">
+                    <div>
+                        <div class="mb-4">
+                            <h3>اسم العميل</h3>
+                            <h3 style="line-height: 35px">
+                                يوم الثلاثاء 20\09 <br>
+                                الساعة 5:00 م
+                            </h3>
+                        </div>
+                    </div>
+                    <div>
+                        <h3>حالة الطلب</h3>
+                        <h3>منتهي</h3>
+                    </div>
                 </div>
 
-                <select class="selectpicker" id="allFilter">
-                    <option>حذف</option>
-                    <option>تعطيل</option>
-                </select>
             </div>
 
-            <div class="filterSort">
-                فلتر حسب
-                <select class="selectpicker" id="selectFilter">
-                    <option>الأحدث</option>
-                    <option>الاقدم</option>
-                </select>
+            <div class="filterDiv p-0 flex-column">
+                <div class="anotherDet">
+                    <h4>معلومات العميل</h4>
+                </div>
+                <div class="payMethods">
+                    <div>
+                        <h3>اسم العميل</h3>
+                        <h3>أماني قاسم</h3>
+                    </div>
+                    <div>
+                        <h3>رقم الجوال</h3>
+                        <h3>01012345678</h3>
+                    </div>
+                </div>
+
             </div>
 
-        </div>
-
-        <div class="tableContainer">
-            <table id="offersTable" class="display nowrap" >
-                <thead>
-                <tr>
-                    <th></th>
-                    <th>رقم</th>
-                    <th>صورة العرض</th>
-                    <th>الحالة</th>
-                    <th></th>
-                </tr>
-                </thead>
-                <tbody>
-
-                <tr>
-                    <td>
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="customCheck1">
-                            <label class="custom-control-label" for="customCheck1"/>
-                        </div>
-                    </td>
-                    <td>1</td>
-                    <td class="offerImg"><img class="img-fluid" src="img/product.jpg" alt="offer"></td>
-                    <td>
-                        <div class="accept">تم القبول</div>
-                    </td>
-                    <td>
-                        <a href="#" class="more">
-                            <span class="icon-more"></span>
-                        </a>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="customCheck2">
-                            <label class="custom-control-label" for="customCheck2"/>
-                        </div>
-                    </td>
-                    <td>1</td>
-                    <td class="offerImg"><img class="img-fluid" src="img/product.jpg" alt="offer"></td>
-                    <td>
-                        <div class="refuse">تم القبول</div>
-                    </td>
-                    <td>
-                        <a href="#" class="more">
-                            <span class="icon-more"></span>
-                        </a>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="customCheck3">
-                            <label class="custom-control-label" for="customCheck3"/>
-                        </div>
-                    </td>
-                    <td>1</td>
-                    <td class="offerImg"><img class="img-fluid" src="img/product.jpg" alt="offer"></td>
-                    <td>
-                        <div class="accept">تم القبول</div>
-                    </td>
-                    <td>
-                        <a href="#" class="more">
-                            <span class="icon-more"></span>
-                        </a>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="customCheck4">
-                            <label class="custom-control-label" for="customCheck4"/>
-                        </div>
-                    </td>
-                    <td>1</td>
-                    <td class="offerImg"><img class="img-fluid" src="img/product.jpg" alt="offer"></td>
-                    <td>
-                        <div class="refuse">تم القبول</div>
-                    </td>
-                    <td>
-                        <a href="#" class="more">
-                            <span class="icon-more"></span>
-                        </a>
-                    </td>
-                </tr>
+            <a class="orangeBtn w-75 mx-auto my-5">تسوية</a>
 
 
-
-                </tbody>
-            </table>
-        </div>
 
 
         </div>
@@ -423,32 +380,8 @@
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/datatables.min.js"></script>
-<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
-<script src="js/bootstrap-select.min.js"></script>
 <script src="js/wow.min.js"></script>
 <script src="js/scripts.js"></script>
-<script>
-    $(document).ready(function() {
-        $('#offersTable').DataTable( {
-            "language": {
-                "paginate": {
-                    "next": '<i class="fas fa-chevron-left"></i>',
-                    "previous": '<i class="fas fa-chevron-right"></i>',
-                }
-            },
-            "scrollY": 200,
-            "scrollX": true
-        } );
-    } );
-</script>
-
-<!--start select-->
-<script>
-    $('.selectpicker').selectpicker();
-</script>
-<!--end select-->
-
 <script>
     new WOW().init();
 </script>

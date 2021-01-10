@@ -615,7 +615,7 @@ body {
   color: #FCA003;
 }
 .dashContent .sideMenu .mainUl li.sub-menu ul {
-  margin: 15px 50px 15px 0;
+  margin: 15px 45px 15px 0;
 }
 .dashContent .sideMenu .mainUl li.sub-menu ul li > a {
   border-right: 0;
@@ -642,6 +642,9 @@ body {
 }
 .dashContent .sideMenu .mainUl li.sub-menu ul li:hover > a:after, .dashContent .sideMenu .mainUl li.sub-menu ul li.active > a:after {
   background: #f29f33;
+}
+.dashContent .sideMenu .mainUl li.sub-menu.sub-subMenu ul {
+  margin: 15px 25px 15px 0;
 }
 .dashContent .content {
   background: #e4e4e4;
@@ -871,9 +874,6 @@ body {
 .dashContent .content .container .notifications .noti .notiHead .title h5 {
   font-size: 18px;
 }
-.dashContent .content .container .notifications .noti .notiHead .title span {
-  margin-right: 40px;
-}
 .dashContent .content .container .notifications .noti .notiHead .stars span {
   font-size: 14px;
   color: #a7a7a7;
@@ -917,7 +917,7 @@ body {
 }
 .dashContent .content .container .notifications .noti.rate {
   display: flex;
-  align-items: center;
+  flex-direction: row;
 }
 .dashContent .content .container .notifications .noti.rate img {
   width: 60px;
@@ -925,6 +925,16 @@ body {
   border-radius: 50%;
   margin-left: 20px;
   border: 1px solid #e2e2e2;
+}
+.dashContent .content .container .notifications .noti.rate .notiHead {
+  align-items: flex-start;
+}
+.dashContent .content .container .notifications .noti.rate .notiHead .report {
+  color: #414141;
+  font-size: 30px;
+}
+.dashContent .content .container .notifications .noti.rate .notiHead .report span {
+  color: #414141;
 }
 .dashContent .content .container .rateNumber {
   background: #fff;
@@ -1413,11 +1423,63 @@ body {
 .dashContent .content .container .filterDiv .settingForm .form-group .locImg img {
   width: 18px;
 }
+.dashContent .content .container .filterDiv .settingForm .form-group .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn), .dashContent .content .container .filterDiv .settingForm .form-group .bootstrap-select > .dropdown-toggle {
+  width: 100%;
+  height: 55px;
+  font-size: 15px;
+  background-color: #f6f6f6;
+  color: #a7a7a7;
+}
+.dashContent .content .container .filterDiv .settingForm .form-group .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) > .dropdown-toggle.bs-placeholder, .dashContent .content .container .filterDiv .settingForm .form-group .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) > .dropdown-toggle.bs-placeholder:active, .dashContent .content .container .filterDiv .settingForm .form-group .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) > .dropdown-toggle.bs-placeholder:focus,
+.dashContent .content .container .filterDiv .settingForm .form-group .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) > .dropdown-toggle.bs-placeholder:hover, .dashContent .content .container .filterDiv .settingForm .form-group .bootstrap-select > .dropdown-toggle > .dropdown-toggle.bs-placeholder, .dashContent .content .container .filterDiv .settingForm .form-group .bootstrap-select > .dropdown-toggle > .dropdown-toggle.bs-placeholder:active, .dashContent .content .container .filterDiv .settingForm .form-group .bootstrap-select > .dropdown-toggle > .dropdown-toggle.bs-placeholder:focus,
+.dashContent .content .container .filterDiv .settingForm .form-group .bootstrap-select > .dropdown-toggle > .dropdown-toggle.bs-placeholder:hover {
+  background: #fff;
+  color: #1c1b1c;
+  font-size: 14px;
+  height: 100%;
+  border: 1px solid #f6f6f6;
+  box-shadow: none;
+  outline: 0 !important;
+  border-radius: 7px;
+}
+.dashContent .content .container .filterDiv .settingForm .form-group .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-toggle:focus, .dashContent .content .container .filterDiv .settingForm .form-group .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) > select.mobile-device:focus + .dropdown-toggle, .dashContent .content .container .filterDiv .settingForm .form-group .bootstrap-select > .dropdown-toggle .dropdown-toggle:focus, .dashContent .content .container .filterDiv .settingForm .form-group .bootstrap-select > .dropdown-toggle > select.mobile-device:focus + .dropdown-toggle {
+  outline: none !important;
+  outline-offset: 0;
+  background-color: #f6f6f6;
+}
+.dashContent .content .container .filterDiv .settingForm .form-group .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .filter-option-inner, .dashContent .content .container .filterDiv .settingForm .form-group .bootstrap-select > .dropdown-toggle .filter-option-inner {
+  height: 100%;
+  align-items: center;
+  display: flex;
+}
+.dashContent .content .container .filterDiv .settingForm .form-group .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-menu, .dashContent .content .container .filterDiv .settingForm .form-group .bootstrap-select > .dropdown-toggle .dropdown-menu {
+  padding: 0;
+}
+.dashContent .content .container .filterDiv .settingForm .form-group .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-menu .dropdown-item.active, .dashContent .content .container .filterDiv .settingForm .form-group .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-menu .dropdown-item:active, .dashContent .content .container .filterDiv .settingForm .form-group .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-menu .dropdown-item:focus, .dashContent .content .container .filterDiv .settingForm .form-group .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-menu .dropdown-item:hover, .dashContent .content .container .filterDiv .settingForm .form-group .bootstrap-select > .dropdown-toggle .dropdown-menu .dropdown-item.active, .dashContent .content .container .filterDiv .settingForm .form-group .bootstrap-select > .dropdown-toggle .dropdown-menu .dropdown-item:active, .dashContent .content .container .filterDiv .settingForm .form-group .bootstrap-select > .dropdown-toggle .dropdown-menu .dropdown-item:focus, .dashContent .content .container .filterDiv .settingForm .form-group .bootstrap-select > .dropdown-toggle .dropdown-menu .dropdown-item:hover {
+  background-color: #FCA003;
+  color: #ffffff;
+}
+.dashContent .content .container .filterDiv .settingForm .form-group .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-menu li, .dashContent .content .container .filterDiv .settingForm .form-group .bootstrap-select > .dropdown-toggle .dropdown-menu li {
+  border-bottom: 1px solid #d6d6d6;
+  text-align: right;
+}
+.dashContent .content .container .filterDiv .settingForm .form-group .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-menu li:last-child, .dashContent .content .container .filterDiv .settingForm .form-group .bootstrap-select > .dropdown-toggle .dropdown-menu li:last-child {
+  border: 0;
+}
+.dashContent .content .container .filterDiv .settingForm .form-group .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-menu li a, .dashContent .content .container .filterDiv .settingForm .form-group .bootstrap-select > .dropdown-toggle .dropdown-menu li a {
+  padding: 10px;
+}
 .dashContent .content .container .filterDiv .openingTime {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+}
+.dashContent .content .container .filterDiv .openingTime h4 {
+  color: #535455;
+  font-size: 22px;
+  margin-bottom: 0;
+  font-weight: bold;
 }
 .dashContent .content .container .filterDiv .openingTime .time {
   display: flex;
@@ -1510,7 +1572,7 @@ body {
   flex: 0.3;
 }
 .dashContent .content .container .filterDiv.contactUs .logo {
-  width: 150px;
+  width: 110px;
   margin-bottom: 20px;
 }
 .dashContent .content .container .filterDiv.contactUs form {
@@ -1615,6 +1677,18 @@ body {
 }
 .dashContent .content .container .filterDiv .tabContent form .form-group .form-control {
   border-radius: 10px;
+}
+.dashContent .content .container .filterDiv .profileInfo h4 {
+  color: #535455;
+  font-size: 18px;
+  font-weight: bold;
+}
+.dashContent .content .container .filterDiv .profileInfo h5 {
+  color: #a7a7a7;
+  font-size: 16px;
+}
+.dashContent .content .container .filterDiv .editInfo {
+  border-radius: 20px;
 }
 .dashContent .content .container div.dataTables_wrapper {
   width: 100%;
@@ -1842,6 +1916,27 @@ body {
 .dashContent .content .container .productContainer .infoCont .info .proName .custom-switch .custom-control-input:checked ~ .custom-control-label::after {
   background-color: #f29f33;
   left: -55px;
+}
+.dashContent .content .container .productContainer .infoCont .info .proName .orangeBtn.editInfo {
+  color: #fff;
+  width: 170px;
+  min-width: 170px !important;
+  border-radius: 20px;
+}
+.dashContent .content .container .productContainer .infoCont .info .proName .orangeBtn.editInfo:hover {
+  color: #FCA003;
+}
+.dashContent .content .container .productContainer .infoCont .info .grayTxtCont {
+  color: #535455;
+  font-size: 17px;
+}
+.dashContent .content .container .productContainer .infoCont .info .lightGrayTxtCont {
+  color: #a7a7a7;
+}
+.dashContent .content .container .productContainer .infoCont .info #map {
+  width: 100%;
+  height: 250px;
+  margin-top: 30px;
 }
 .dashContent .content .container .productContainer .infoCont .info h5 {
   font-size: 18px;
@@ -2340,6 +2435,9 @@ body {
     width: 70px;
     height: 70px;
   }
+  .dashContent .content .container .filterDiv .settingForm .form-group {
+    width: 100% !important;
+  }
   .dashContent .content .container .filterDiv .settingForm .form-group img {
     width: 20px;
     height: 20px;
@@ -2417,7 +2515,7 @@ body {
     margin: auto;
   }
   .dashContent .content .container .filterDiv.contactUs .logo {
-    width: 110px;
+    width: 80px;
   }
   .dashContent .content .container .filterDiv .modal .modal-dialog .modal-title {
     font-size: 17px;
@@ -2562,6 +2660,13 @@ body {
   .dashContent .content .container .notifications .noti .notiHead .title span {
     margin-right: 0;
   }
+  .dashContent .content .container .notifications .noti.rate .notiHead {
+    align-items: center;
+  }
+  .dashContent .content .container .notifications .noti.rate .notiHead span {
+    text-align: center;
+    margin-bottom: 10px;
+  }
   .dashContent .content .container .notifications .noti p {
     width: 100%;
     text-align: center;
@@ -2577,7 +2682,7 @@ body {
   .dashContent .content .container .notifications .noti.rate img {
     width: 55px;
     height: 55px;
-    margin: 0 0 20px;
+    margin: 0 auto 20px;
   }
   .dashContent .content .container .productContainer .headTitle {
     font-size: 15px;
@@ -2730,6 +2835,10 @@ body {
   }
   .dashContent .content .container .filterDiv .orangeBtn {
     min-width: 200px !important;
+  }
+  .dashContent .content .container .filterDiv .orangeBtn.editInfo {
+    width: 170px;
+    min-width: 170px !important;
   }
   .dashContent .content .container .filterDiv .dropBox {
     display: flex;

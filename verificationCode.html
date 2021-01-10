@@ -15,9 +15,6 @@
     <link href="css/icomoon.css" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/datatables.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css"/>
-    <link href="css/bootstrap-select.min.css" rel="stylesheet"/>
     <!--    <link href="css/styleRTL.css" rel="stylesheet" />-->
 
 </head>
@@ -83,24 +80,24 @@
                 <span>ادارة الطلبات</span>
             </a>
 
+            <a href="offers.html" class="mobileLinks d-md-none">
+                <span class="icon-Offers"></span>
+                <span>ادارة العروض</span>
+            </a>
+
             <div class="active mobileLinks sub-menu d-md-none">
 
-                <a href="offers.html">
-                    <span class="icon-Offers"></span>
-                    <span>ادارة العروض</span>
+                <a href="settings.html">
+                    <span class="icon-settings"></span>
+                    <span>ادارة الملف الشخصي</span>
                 </a>
 
                 <ul>
-                    <li><a href='offers.html'>اضافة صورة</a></li>
-                    <li class="active"><a href='previousOffers.html'>العروض السابقة</a></li>
+                    <li class="active"><a href='settings.html'>الملف الشخصي</a></li>
+                    <li><a href='restInfo.html'>معلومات المطعم</a></li>
                 </ul>
 
             </div>
-
-            <a href="settings.html" class="mobileLinks d-md-none">
-                <span class="icon-settings"></span>
-                <span>ادارة الملف الشخصي</span>
-            </a>
 
             <a href="comments.html" class="mobileLinks d-md-none">
                 <span class="icon-chat"></span>
@@ -203,22 +200,23 @@
                 </a>
             </li>
 
-            <li class="active sub-menu">
+            <li>
                 <a href="offers.html">
                     <span class="icon-Offers"></span>
                     ادارة العروض
                 </a>
-                <ul>
-                    <li><a href='offers.html'>اضافة صورة</a></li>
-                    <li class="active"><a href='previousOffers.html'>العروض السابقة</a></li>
-                </ul>
             </li>
 
-            <li>
+
+            <li class="active sub-menu">
                 <a href="settings.html">
                     <span class="icon-settings"></span>
                     ادارة الملف الشخصي
                 </a>
+                <ul>
+                    <li class="active"><a href='settings.html'>الملف الشخصي</a></li>
+                    <li><a href='restInfo.html'>معلومات المطعم</a></li>
+                </ul>
             </li>
 
             <li>
@@ -288,124 +286,30 @@
 
             </div>
 
-            <div class="filterDiv">
-
-            <div class="d-flex align-items-center filterBox">
-                <div class="custom-control custom-checkbox">
-                    <input type="checkbox" class="custom-control-input" id="selectAll">
-                    <label class="custom-control-label" for="selectAll">تحديد الكل</label>
+            <div class="notifications">
+                <div class="headTitle bgWhite mb-3">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb m-0">
+                            <li class="breadcrumb-item"><a href="settings.html">الملف الشخصي</a></li>
+                            <li class="breadcrumb-item active" aria-current="page"><i class='fas fa-chevron-left'></i>تغيير كلمة المرور</li>
+                        </ol>
+                    </nav>
                 </div>
-
-                <select class="selectpicker" id="allFilter">
-                    <option>حذف</option>
-                    <option>تعطيل</option>
-                </select>
             </div>
 
-            <div class="filterSort">
-                فلتر حسب
-                <select class="selectpicker" id="selectFilter">
-                    <option>الأحدث</option>
-                    <option>الاقدم</option>
-                </select>
+            <div class="filterDiv flex-column p-lg-5">
+                <form class="settingForm" action="editPassword.html">
+
+                    <div class="form-group">
+                        <label for="code">كود التحقق</label>
+                        <input type="text" class="form-control" id="code">
+                    </div>
+
+                    <button type="submit" class="orangeBtn w-75 mb-4 mt-2">ارسال</button>
+
+                </form>
+
             </div>
-
-        </div>
-
-        <div class="tableContainer">
-            <table id="offersTable" class="display nowrap" >
-                <thead>
-                <tr>
-                    <th></th>
-                    <th>رقم</th>
-                    <th>صورة العرض</th>
-                    <th>الحالة</th>
-                    <th></th>
-                </tr>
-                </thead>
-                <tbody>
-
-                <tr>
-                    <td>
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="customCheck1">
-                            <label class="custom-control-label" for="customCheck1"/>
-                        </div>
-                    </td>
-                    <td>1</td>
-                    <td class="offerImg"><img class="img-fluid" src="img/product.jpg" alt="offer"></td>
-                    <td>
-                        <div class="accept">تم القبول</div>
-                    </td>
-                    <td>
-                        <a href="#" class="more">
-                            <span class="icon-more"></span>
-                        </a>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="customCheck2">
-                            <label class="custom-control-label" for="customCheck2"/>
-                        </div>
-                    </td>
-                    <td>1</td>
-                    <td class="offerImg"><img class="img-fluid" src="img/product.jpg" alt="offer"></td>
-                    <td>
-                        <div class="refuse">تم القبول</div>
-                    </td>
-                    <td>
-                        <a href="#" class="more">
-                            <span class="icon-more"></span>
-                        </a>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="customCheck3">
-                            <label class="custom-control-label" for="customCheck3"/>
-                        </div>
-                    </td>
-                    <td>1</td>
-                    <td class="offerImg"><img class="img-fluid" src="img/product.jpg" alt="offer"></td>
-                    <td>
-                        <div class="accept">تم القبول</div>
-                    </td>
-                    <td>
-                        <a href="#" class="more">
-                            <span class="icon-more"></span>
-                        </a>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <div class="custom-control custom-checkbox">
-                            <input type="checkbox" class="custom-control-input" id="customCheck4">
-                            <label class="custom-control-label" for="customCheck4"/>
-                        </div>
-                    </td>
-                    <td>1</td>
-                    <td class="offerImg"><img class="img-fluid" src="img/product.jpg" alt="offer"></td>
-                    <td>
-                        <div class="refuse">تم القبول</div>
-                    </td>
-                    <td>
-                        <a href="#" class="more">
-                            <span class="icon-more"></span>
-                        </a>
-                    </td>
-                </tr>
-
-
-
-                </tbody>
-            </table>
-        </div>
 
 
         </div>
@@ -423,32 +327,8 @@
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/datatables.min.js"></script>
-<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
-<script src="js/bootstrap-select.min.js"></script>
 <script src="js/wow.min.js"></script>
 <script src="js/scripts.js"></script>
-<script>
-    $(document).ready(function() {
-        $('#offersTable').DataTable( {
-            "language": {
-                "paginate": {
-                    "next": '<i class="fas fa-chevron-left"></i>',
-                    "previous": '<i class="fas fa-chevron-right"></i>',
-                }
-            },
-            "scrollY": 200,
-            "scrollX": true
-        } );
-    } );
-</script>
-
-<!--start select-->
-<script>
-    $('.selectpicker').selectpicker();
-</script>
-<!--end select-->
-
 <script>
     new WOW().init();
 </script>
