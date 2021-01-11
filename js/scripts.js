@@ -47,7 +47,7 @@ $(document).ready(function () {
     $('.uploadFile').change(function() {
         var i = $(this).prev('.custom-file-upload').clone();
         var file = $(this)[0].files[0].name;
-        $(this).prev('#docPhoto').attr('placeholder',file);
+        $(this).prev('.docPhoto').attr('placeholder',file);
     });
 
 

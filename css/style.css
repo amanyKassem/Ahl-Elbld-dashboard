@@ -610,6 +610,11 @@ body {
   height: 55px;
   margin: 50px auto 25px;
 }
+.dashContent .sideMenu .mainUl li > a.fastingBreakfast.active {
+  background: transparent;
+  border: 1px solid #f29f33;
+  color: #f29f33;
+}
 .dashContent .sideMenu .mainUl li.active > a, .dashContent .sideMenu .mainUl li:hover > a {
   border-right: 3px solid #FCA003;
   color: #FCA003;
@@ -645,6 +650,10 @@ body {
 }
 .dashContent .sideMenu .mainUl li.sub-menu.sub-subMenu ul {
   margin: 15px 25px 15px 0;
+}
+.dashContent .sideMenu .mainUl li.sub-menu.sub-subMenu ul li:hover > a:after, .dashContent .sideMenu .mainUl li.sub-menu.sub-subMenu ul li.active > a:after {
+  background: transparent;
+  border: 1px solid #FCA003;
 }
 .dashContent .content {
   background: #e4e4e4;
@@ -982,7 +991,7 @@ body {
 }
 .dashContent .content .container .filterDiv .custom-checkbox .custom-control-label {
   padding-right: 25px;
-  font-size: 15px;
+  font-size: 17px;
   color: #2d2d2d;
 }
 .dashContent .content .container .filterDiv .custom-checkbox .custom-control-label::before {
@@ -1380,6 +1389,13 @@ body {
   flex-direction: column;
   align-items: center;
 }
+.dashContent .content .container .filterDiv .settingForm .papers {
+  color: #414141;
+  font-size: 24px;
+  font-weight: bold;
+  align-self: flex-start;
+  margin: 10px 0 35px;
+}
 .dashContent .content .container .filterDiv .settingForm .changeImg {
   margin-bottom: 50px;
 }
@@ -1413,12 +1429,26 @@ body {
 .dashContent .content .container .filterDiv .settingForm .form-group input {
   color: #7e8082;
 }
+.dashContent .content .container .filterDiv .settingForm .form-group .uploadFile {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 55px;
+}
 .dashContent .content .container .filterDiv .settingForm .form-group img {
   width: 25px;
   height: 25px;
   position: absolute;
   left: 20px;
   bottom: 15px;
+}
+.dashContent .content .container .filterDiv .settingForm .form-group .icon-photo_camera {
+  font-size: 20px;
+  position: absolute;
+  left: 20px;
+  bottom: 15px;
+  color: #414141;
 }
 .dashContent .content .container .filterDiv .settingForm .form-group .locImg img {
   width: 18px;
@@ -1874,6 +1904,14 @@ body {
   flex: 1;
   margin-right: 15px;
 }
+.dashContent .content .container .productContainer .infoCont .info .delegateOrders {
+  color: #FCA003;
+  text-decoration: underline;
+  font-size: 17px;
+  display: inline-flex;
+  margin-top: 25px;
+  font-weight: bold;
+}
 .dashContent .content .container .productContainer .infoCont .info .proName {
   display: flex;
   justify-content: space-between;
@@ -2267,6 +2305,13 @@ body {
   .dashHeader .container .menu .mobileLinks.sub-menu ul li:hover > a:after, .dashHeader .container .menu .mobileLinks.sub-menu ul li.active > a:after {
     background: #f29f33;
   }
+  .dashHeader .container .menu .mobileLinks.sub-menu ul li.sub-subMenu ul {
+    margin: 15px 15px 15px 0;
+  }
+  .dashHeader .container .menu .mobileLinks.sub-menu ul li.sub-subMenu ul li:hover > a:after, .dashHeader .container .menu .mobileLinks.sub-menu ul li.sub-subMenu ul li.active > a:after {
+    background: transparent;
+    border: 1px solid #FCA003;
+  }
   .dashHeader .container .menu .mobileLinks span:first-child {
     font-size: 18px;
     margin-left: 10px;
@@ -2384,6 +2429,12 @@ body {
     flex-wrap: wrap;
     padding: 20px 25px;
   }
+  .dashContent .content .container .filterDiv .settingForm .papers {
+    font-size: 18px;
+  }
+  .dashContent .content .container .filterDiv .custom-checkbox .custom-control-label {
+    font-size: 14px;
+  }
   .dashContent .content .container .filterDiv .openingTime {
     flex-direction: column;
   }
@@ -2438,11 +2489,19 @@ body {
   .dashContent .content .container .filterDiv .settingForm .form-group {
     width: 100% !important;
   }
+  .dashContent .content .container .filterDiv .settingForm .form-group .uploadFile {
+    height: 45px;
+  }
   .dashContent .content .container .filterDiv .settingForm .form-group img {
     width: 20px;
     height: 20px;
     left: 12px;
     bottom: 13px;
+  }
+  .dashContent .content .container .filterDiv .settingForm .form-group .icon-photo_camera {
+    font-size: 16px;
+    left: 20px;
+    bottom: 14px;
   }
   .dashContent .content .container .filterDiv .settingForm .form-group .locImg img {
     width: 14px;
@@ -2645,8 +2704,10 @@ body {
     flex-direction: column;
   }
   .dashContent .content .container .notifications .noti .notiHead h5 {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 10px;
+    text-align: center;
+    line-height: 30px;
   }
   .dashContent .content .container .notifications .noti .notiHead .title {
     margin-bottom: 15px;
@@ -2824,6 +2885,9 @@ body {
     flex-wrap: wrap;
     padding: 20px 15px;
   }
+  .dashContent .content .container .filterDiv .settingForm .form-group {
+    width: 100% !important;
+  }
   .dashContent .content .container .filterDiv .sellsCont div span {
     flex: 1;
   }
@@ -2850,9 +2914,6 @@ body {
   }
   .dashContent .content .container .filterDiv .payMethods div h3 {
     font-size: 15px;
-  }
-  .dashContent .content .container .filterDiv .addMenu {
-    margin-top: 20px;
   }
   .dashContent .content .container .filterDiv .modal .modal-dialog {
     max-width: 600px;

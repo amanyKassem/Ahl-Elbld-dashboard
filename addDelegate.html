@@ -15,8 +15,6 @@
     <link href="css/icomoon.css" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/datatables.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css"/>
     <link href="css/bootstrap-select.min.css" rel="stylesheet"/>
     <!--    <link href="css/styleRTL.css" rel="stylesheet" />-->
 
@@ -78,26 +76,10 @@
                 <span>ادارة المنتجات</span>
             </a>
 
-            <div class="active mobileLinks sub-menu d-md-none">
-
-                <a href="orders.html">
-                    <span class="icon-orders"></span>
-                    <span>ادارة الطلبات</span>
-                </a>
-
-                <ul>
-                    <li class="active sub-subMenu">
-                        <a href='orders.html'>طلبات عادية</a>
-                        <ul>
-                            <li class="active"><a href='orders.html'>طلبات جديدة</a></li>
-                            <li><a href='normalInProgress.html'>طلبات قيد التنفيذ</a></li>
-                            <li><a href='normalFinished.html'>طلبات منتهية</a></li>
-                        </ul>
-                    </li>
-                    <li><a href='specialOrders.html'>طلبات خاصة</a></li>
-                </ul>
-
-            </div>
+            <a href="orders.html" class="mobileLinks d-md-none">
+                <span class="icon-orders"></span>
+                <span>ادارة الطلبات</span>
+            </a>
 
             <a href="offers.html" class="mobileLinks d-md-none">
                 <span class="icon-Offers"></span>
@@ -124,7 +106,7 @@
                 <span>خدمة الحسابات المالية</span>
             </a>
 
-            <a href="delivery.html" class="mobileLinks d-md-none">
+            <a href="delivery.html" class="active mobileLinks d-md-none">
                 <span class="icon-delivery"></span>
                 <span>ادارة توصيل</span>
             </a>
@@ -202,24 +184,11 @@
                 </a>
             </li>
 
-            <li class="active sub-menu">
+            <li>
                 <a href="orders.html">
                     <span class="icon-orders"></span>
                     ادارة الطلبات
                 </a>
-                <ul>
-                    <li class="active sub-menu sub-subMenu">
-                        <a href='orders.html'>طلبات عادية</a>
-
-                        <ul>
-                            <li class="active"><a href='orders.html'>طلبات جديدة</a></li>
-                            <li><a href='normalInProgress.html'>طلبات قيد التنفيذ</a></li>
-                            <li><a href='normalFinished.html'>طلبات منتهية</a></li>
-                        </ul>
-
-                    </li>
-                    <li><a href='specialOrders.html'>طلبات خاصة</a></li>
-                </ul>
             </li>
 
             <li>
@@ -250,14 +219,14 @@
                 </a>
             </li>
 
-            <li >
+            <li>
                 <a href="financialAccounts.html">
                     <span class="icon-bar_chart"></span>
                     ادارة الحسابات المالية
                 </a>
             </li>
 
-            <li>
+            <li class="active">
                 <a href="delivery.html">
                     <span class="icon-delivery"></span>
                     ادارة توصيل
@@ -304,147 +273,142 @@
             </div>
 
             <div class="notifications">
-
                 <div class="headTitle bgWhite mb-3">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb m-0">
-                            <li class="breadcrumb-item"><a>ادارة الطلبات</a></li>
-                            <li class="breadcrumb-item"><a><i class='fas fa-chevron-left'></i>طلبات عادية</a></li>
-                            <li class="breadcrumb-item active" aria-current="page"><i class='fas fa-chevron-left'></i>طلبات جديدة</li>
+                            <li class="breadcrumb-item"><a href="delivery.html">ادارة التوصيل</a></li>
+                            <li class="breadcrumb-item active" aria-current="page"><i class='fas fa-chevron-left'></i>اضافة المندوب</li>
                         </ol>
                     </nav>
                 </div>
             </div>
 
-            <div class="filterDiv flex-column flex-sm-row justify-content-center justify-content-sm-between">
+            <div class="filterDiv flex-column p-lg-5">
+                <form class="settingForm" action="delivery.html">
 
-                <div class="d-flex align-items-center filterBox my-2 my-lg-0">
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="selectAll">
-                        <label class="custom-control-label" for="selectAll">تحديد الكل</label>
+                    <div class="changeImg">
+                        <a class="change">
+                            <img src="img/upload_image_full.png" alt="profile">
+                            <input class="file-upload" type="file" accept="image/*"/>
+                        </a>
                     </div>
 
-                    <select class="selectpicker" id="allFilter">
-                        <option>حذف</option>
-                        <option>تعطيل</option>
-                    </select>
-                </div>
+                    <div class="d-flex justify-content-between align-items-center flex-wrap w-100">
+                        <div class="form-group w-49">
+                            <label for="name">اسم المندوب بالكامل</label>
+                            <input type="text" class="form-control" id="name" >
+                        </div>
+                        <div class="form-group w-49">
+                            <label for="phone">رقم الجوال</label>
+                            <input type="tel" class="form-control" id="phone" >
+                        </div>
+                    </div>
 
-                <div class="filterSort my-2 my-lg-0">
-                    فلتر حسب نوع الطلب
-                    <select class="selectpicker" id="selectFilter">
-                        <option>الأحدث</option>
-                        <option>الاقدم</option>
-                    </select>
-                </div>
+                    <div class="d-flex justify-content-between align-items-center flex-wrap w-100">
+                        <div class="form-group w-49">
+                            <label for="id">رقم الهوية الوطنية</label>
+                            <input type="text" class="form-control" id="id" >
+                        </div>
+                        <div class="form-group w-49">
+                            <label for="nationality">الجنسية</label>
+                            <input type="text" class="form-control" id="nationality" >
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center flex-wrap w-100">
+                        <div class="form-group w-49">
+                            <label for="bDate">تاريخ ميلاد السائق</label>
+                            <input type="text" class="form-control" id="bDate" >
+                        </div>
+                        <div class="form-group w-49">
+                            <label for="email">البريد الالكتروني</label>
+                            <input type="email" class="form-control" id="email" >
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center flex-wrap w-100">
+                        <div class="form-group w-49">
+                            <label for="area">المنطقة</label>
+                            <select class="selectpicker mr-0" id="area">
+                                <option>جدة</option>
+                                <option>مكه</option>
+                            </select>
+                        </div>
+                        <div class="form-group w-49">
+                            <label for="city">المدينة</label>
+                            <select class="selectpicker mr-0" id="city">
+                                <option>جدة</option>
+                                <option>مكه</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center flex-wrap w-100">
+                        <div class="form-group w-49">
+                            <label for="year">سنة الصنع</label>
+                            <input type="text" class="form-control" id="year" >
+                        </div>
+                        <div class="form-group w-49">
+                            <label for="car">نوع السيارة</label>
+                            <input type="text" class="form-control" id="car" >
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center flex-wrap w-100">
+                        <div class="form-group w-49">
+                            <label for="carNum">ارقام لوحة المركبة ( باللغة الانجليزية )</label>
+                            <input type="number" class="form-control" id="carNum" >
+                        </div>
+                        <div class="form-group w-49">
+                            <label for="carChar">حروف لوحة المركبة ( باللغة الانجليزية )</label>
+                            <input type="text" class="form-control" id="carChar" >
+                        </div>
+                    </div>
+
+                    <h4 class="papers">الوثائق المطلوبة</h4>
+
+                    <div class="d-flex justify-content-between align-items-center flex-wrap w-100">
+                        <div class="form-group w-49">
+                            <label for="photo-upload" class="custom-file-upload">صورة من رخصة القيادة</label>
+                            <input type="text" class="form-control docPhoto" id="docPhoto" placeholder="Browse" disabled>
+                            <input id="photo-upload" class="uploadFile" name='upload_cont_file' type="file">
+                            <span class="icon-photo_camera"></span>
+                        </div>
+                        <div class="form-group w-49">
+                            <label for="photo-upload" class="custom-file-upload">صورة من بطاقة الهوية الوطنية</label>
+                            <input type="text" class="form-control docPhoto" id="docPhoto2" placeholder="Browse" disabled>
+                            <input id="photo-upload2" class="uploadFile" name='upload_cont_file' type="file">
+                            <span class="icon-photo_camera"></span>
+                        </div>
+                    </div>
+
+
+                    <div class="d-flex justify-content-between align-items-center flex-wrap w-100">
+                        <div class="form-group w-49">
+                            <label for="photo-upload" class="custom-file-upload">صورة السيارة من الخلف</label>
+                            <input type="text" class="form-control docPhoto" id="docPhoto3" placeholder="Browse" disabled>
+                            <input id="photo-upload3" class="uploadFile" name='upload_cont_file' type="file">
+                            <span class="icon-photo_camera"></span>
+                        </div>
+                        <div class="form-group w-49">
+                            <label for="photo-upload" class="custom-file-upload">صورة السيارة من الامام</label>
+                            <input type="text" class="form-control docPhoto" id="docPhoto4" placeholder="Browse" disabled>
+                            <input id="photo-upload4" class="uploadFile" name='upload_cont_file' type="file">
+                            <span class="icon-photo_camera"></span>
+                        </div>
+                    </div>
+
+
+                    <div class="custom-control custom-checkbox align-self-start">
+                        <input type="checkbox" class="custom-control-input" id="terms" name="terms">
+                        <label class="custom-control-label subTitle" for="terms">اقر بأنني قد قرأت الشروط المذكورة و وافقت عليها</label>
+                    </div>
+
+
+                    <button type="submit" class="orangeBtn w-75 my-5">ارسال طلب</button>
+                </form>
 
             </div>
-
-            <div class="tableContainer">
-                <table id="ordersTable" class="display nowrap" >
-                    <thead>
-                    <tr>
-                        <th></th>
-                        <th>رقم</th>
-                        <th>اسم العميل</th>
-                        <th>السعر الاجمالي</th>
-                        <th>الحالة</th>
-                        <th>التفاصيل</th>
-                        <th></th>
-                    </tr>
-                    </thead>
-                    <tbody>
-
-                    <tr>
-                        <td>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                <label class="custom-control-label" for="customCheck1"/>
-                            </div>
-                        </td>
-                        <td>1</td>
-                        <td>أماني قاسم</td>
-                        <td>60 رس</td>
-                        <td>جديدة</td>
-                        <td>
-                            <a href="normalOrderDetails.html">عرض التفاصيل</a>
-                        </td>
-                        <td>
-                            <a href="#" class="more">
-                                <span class="icon-more"></span>
-                            </a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck2">
-                                <label class="custom-control-label" for="customCheck2"/>
-                            </div>
-                        </td>
-                        <td>1</td>
-                        <td>أماني قاسم</td>
-                        <td>60 رس</td>
-                        <td>جديدة</td>
-                        <td>
-                            <a href="normalOrderDetails.html">عرض التفاصيل</a>
-                        </td>
-                        <td>
-                            <a href="#" class="more">
-                                <span class="icon-more"></span>
-                            </a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck3">
-                                <label class="custom-control-label" for="customCheck3"/>
-                            </div>
-                        </td>
-                        <td>1</td>
-                        <td>أماني قاسم</td>
-                        <td>60 رس</td>
-                        <td>جديدة</td>
-                        <td>
-                            <a href="normalOrderDetails.html">عرض التفاصيل</a>
-                        </td>
-                        <td>
-                            <a href="#" class="more">
-                                <span class="icon-more"></span>
-                            </a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck4">
-                                <label class="custom-control-label" for="customCheck4"/>
-                            </div>
-                        </td>
-                        <td>1</td>
-                        <td>أماني قاسم</td>
-                        <td>60 رس</td>
-                        <td>جديدة</td>
-                        <td>
-                            <a href="normalOrderDetails.html">عرض التفاصيل</a>
-                        </td>
-                        <td>
-                            <a href="#" class="more">
-                                <span class="icon-more"></span>
-                            </a>
-                        </td>
-                    </tr>
-
-
-                    </tbody>
-                </table>
-            </div>
-
-
 
 
         </div>
@@ -462,35 +426,16 @@
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/datatables.min.js"></script>
-<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
 <script src="js/bootstrap-select.min.js"></script>
 <script src="js/wow.min.js"></script>
 <script src="js/scripts.js"></script>
-<script>
-    $(document).ready(function() {
-        $('#ordersTable').DataTable( {
-            "language": {
-                "paginate": {
-                    "next": '<i class="fas fa-chevron-left"></i>',
-                    "previous": '<i class="fas fa-chevron-right"></i>',
-                }
-            },
-            "scrollY": 200,
-            "scrollX": true
-        } );
-    } );
-</script>
-
 <!--start select-->
 <script>
     $('.selectpicker').selectpicker();
 </script>
 <!--end select-->
 
-<script>
-    new WOW().init();
-</script>
+
 
 
 </body>

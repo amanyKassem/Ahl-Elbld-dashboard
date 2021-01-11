@@ -15,9 +15,6 @@
     <link href="css/icomoon.css" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/datatables.min.css"/>
-    <link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css"/>
-    <link href="css/bootstrap-select.min.css" rel="stylesheet"/>
     <!--    <link href="css/styleRTL.css" rel="stylesheet" />-->
 
 </head>
@@ -78,26 +75,10 @@
                 <span>ادارة المنتجات</span>
             </a>
 
-            <div class="active mobileLinks sub-menu d-md-none">
-
-                <a href="orders.html">
-                    <span class="icon-orders"></span>
-                    <span>ادارة الطلبات</span>
-                </a>
-
-                <ul>
-                    <li class="active sub-subMenu">
-                        <a href='orders.html'>طلبات عادية</a>
-                        <ul>
-                            <li class="active"><a href='orders.html'>طلبات جديدة</a></li>
-                            <li><a href='normalInProgress.html'>طلبات قيد التنفيذ</a></li>
-                            <li><a href='normalFinished.html'>طلبات منتهية</a></li>
-                        </ul>
-                    </li>
-                    <li><a href='specialOrders.html'>طلبات خاصة</a></li>
-                </ul>
-
-            </div>
+            <a href="orders.html" class="mobileLinks d-md-none">
+                <span class="icon-orders"></span>
+                <span>ادارة الطلبات</span>
+            </a>
 
             <a href="offers.html" class="mobileLinks d-md-none">
                 <span class="icon-Offers"></span>
@@ -124,7 +105,7 @@
                 <span>خدمة الحسابات المالية</span>
             </a>
 
-            <a href="delivery.html" class="mobileLinks d-md-none">
+            <a href="delivery.html" class="active mobileLinks d-md-none">
                 <span class="icon-delivery"></span>
                 <span>ادارة توصيل</span>
             </a>
@@ -202,24 +183,11 @@
                 </a>
             </li>
 
-            <li class="active sub-menu">
+            <li>
                 <a href="orders.html">
                     <span class="icon-orders"></span>
                     ادارة الطلبات
                 </a>
-                <ul>
-                    <li class="active sub-menu sub-subMenu">
-                        <a href='orders.html'>طلبات عادية</a>
-
-                        <ul>
-                            <li class="active"><a href='orders.html'>طلبات جديدة</a></li>
-                            <li><a href='normalInProgress.html'>طلبات قيد التنفيذ</a></li>
-                            <li><a href='normalFinished.html'>طلبات منتهية</a></li>
-                        </ul>
-
-                    </li>
-                    <li><a href='specialOrders.html'>طلبات خاصة</a></li>
-                </ul>
             </li>
 
             <li>
@@ -250,14 +218,14 @@
                 </a>
             </li>
 
-            <li >
+            <li>
                 <a href="financialAccounts.html">
                     <span class="icon-bar_chart"></span>
                     ادارة الحسابات المالية
                 </a>
             </li>
 
-            <li>
+            <li class="active">
                 <a href="delivery.html">
                     <span class="icon-delivery"></span>
                     ادارة توصيل
@@ -304,148 +272,53 @@
             </div>
 
             <div class="notifications">
-
                 <div class="headTitle bgWhite mb-3">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb m-0">
-                            <li class="breadcrumb-item"><a>ادارة الطلبات</a></li>
-                            <li class="breadcrumb-item"><a><i class='fas fa-chevron-left'></i>طلبات عادية</a></li>
-                            <li class="breadcrumb-item active" aria-current="page"><i class='fas fa-chevron-left'></i>طلبات جديدة</li>
+                            <li class="breadcrumb-item"><a href="delivery.html">ادارة التوصيل</a></li>
+                            <li class="breadcrumb-item active" aria-current="page"><i class='fas fa-chevron-left'></i>تفاصيل المندوب</li>
                         </ol>
                     </nav>
                 </div>
             </div>
 
-            <div class="filterDiv flex-column flex-sm-row justify-content-center justify-content-sm-between">
+            <div class="productContainer">
+                <div class="headTitle">
+                    تفاصيل المندوب
+                </div>
 
-                <div class="d-flex align-items-center filterBox my-2 my-lg-0">
-                    <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="selectAll">
-                        <label class="custom-control-label" for="selectAll">تحديد الكل</label>
+                <div class="infoCont">
+                    <img src="img/product.jpg" alt="product" class="img-fluid">
+                    <div class="info">
+                        <div class="proName mb-3">
+                            <h5>اسم المنتج</h5>
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="aval">
+                                <label class="custom-control-label" for="aval">متوفر</label>
+                            </div>
+                        </div>
+                        <h4 class="mb-3">رقم الجوال</h4>
+                        <h5 class="mb-3">0102345678</h5>
+                        <h4 class="mb-3">عدد الطلبات</h4>
+                        <h5 class="mb-3">122 طلب</h5>
+
+                        <h4 class="mb-3">الاجمالي</h4>
+                        <h3 class="price">100 ريال</h3>
+
+                        <h4 class="mb-3">العمولة</h4>
+                        <h3 class="price">100 ريال</h3>
+
+                        <div class="d-flex align-items-center mt-5 flex-wrap">
+                            <a href="addDelegate.html" class="edit w-auto px-3 mb-3 mb-sm-0">تعديل المندوب</a>
+                            <a href="#" class="delete w-auto px-3">حذف المندوب</a>
+                        </div>
+
+                        <a href="delegateOrders.html" class="delegateOrders">مشاهدة الطلبات التي يتبعها المندوب</a>
+
                     </div>
-
-                    <select class="selectpicker" id="allFilter">
-                        <option>حذف</option>
-                        <option>تعطيل</option>
-                    </select>
-                </div>
-
-                <div class="filterSort my-2 my-lg-0">
-                    فلتر حسب نوع الطلب
-                    <select class="selectpicker" id="selectFilter">
-                        <option>الأحدث</option>
-                        <option>الاقدم</option>
-                    </select>
                 </div>
 
             </div>
-
-            <div class="tableContainer">
-                <table id="ordersTable" class="display nowrap" >
-                    <thead>
-                    <tr>
-                        <th></th>
-                        <th>رقم</th>
-                        <th>اسم العميل</th>
-                        <th>السعر الاجمالي</th>
-                        <th>الحالة</th>
-                        <th>التفاصيل</th>
-                        <th></th>
-                    </tr>
-                    </thead>
-                    <tbody>
-
-                    <tr>
-                        <td>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                <label class="custom-control-label" for="customCheck1"/>
-                            </div>
-                        </td>
-                        <td>1</td>
-                        <td>أماني قاسم</td>
-                        <td>60 رس</td>
-                        <td>جديدة</td>
-                        <td>
-                            <a href="normalOrderDetails.html">عرض التفاصيل</a>
-                        </td>
-                        <td>
-                            <a href="#" class="more">
-                                <span class="icon-more"></span>
-                            </a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck2">
-                                <label class="custom-control-label" for="customCheck2"/>
-                            </div>
-                        </td>
-                        <td>1</td>
-                        <td>أماني قاسم</td>
-                        <td>60 رس</td>
-                        <td>جديدة</td>
-                        <td>
-                            <a href="normalOrderDetails.html">عرض التفاصيل</a>
-                        </td>
-                        <td>
-                            <a href="#" class="more">
-                                <span class="icon-more"></span>
-                            </a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck3">
-                                <label class="custom-control-label" for="customCheck3"/>
-                            </div>
-                        </td>
-                        <td>1</td>
-                        <td>أماني قاسم</td>
-                        <td>60 رس</td>
-                        <td>جديدة</td>
-                        <td>
-                            <a href="normalOrderDetails.html">عرض التفاصيل</a>
-                        </td>
-                        <td>
-                            <a href="#" class="more">
-                                <span class="icon-more"></span>
-                            </a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck4">
-                                <label class="custom-control-label" for="customCheck4"/>
-                            </div>
-                        </td>
-                        <td>1</td>
-                        <td>أماني قاسم</td>
-                        <td>60 رس</td>
-                        <td>جديدة</td>
-                        <td>
-                            <a href="normalOrderDetails.html">عرض التفاصيل</a>
-                        </td>
-                        <td>
-                            <a href="#" class="more">
-                                <span class="icon-more"></span>
-                            </a>
-                        </td>
-                    </tr>
-
-
-                    </tbody>
-                </table>
-            </div>
-
-
-
 
         </div>
     </div>
@@ -462,35 +335,9 @@
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script type="text/javascript" src="js/datatables.min.js"></script>
-<script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
-<script src="js/bootstrap-select.min.js"></script>
 <script src="js/wow.min.js"></script>
 <script src="js/scripts.js"></script>
-<script>
-    $(document).ready(function() {
-        $('#ordersTable').DataTable( {
-            "language": {
-                "paginate": {
-                    "next": '<i class="fas fa-chevron-left"></i>',
-                    "previous": '<i class="fas fa-chevron-right"></i>',
-                }
-            },
-            "scrollY": 200,
-            "scrollX": true
-        } );
-    } );
-</script>
 
-<!--start select-->
-<script>
-    $('.selectpicker').selectpicker();
-</script>
-<!--end select-->
-
-<script>
-    new WOW().init();
-</script>
 
 
 </body>

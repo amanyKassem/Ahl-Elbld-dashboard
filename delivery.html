@@ -78,26 +78,10 @@
                 <span>ادارة المنتجات</span>
             </a>
 
-            <div class="active mobileLinks sub-menu d-md-none">
-
-                <a href="orders.html">
-                    <span class="icon-orders"></span>
-                    <span>ادارة الطلبات</span>
-                </a>
-
-                <ul>
-                    <li class="active sub-subMenu">
-                        <a href='orders.html'>طلبات عادية</a>
-                        <ul>
-                            <li class="active"><a href='orders.html'>طلبات جديدة</a></li>
-                            <li><a href='normalInProgress.html'>طلبات قيد التنفيذ</a></li>
-                            <li><a href='normalFinished.html'>طلبات منتهية</a></li>
-                        </ul>
-                    </li>
-                    <li><a href='specialOrders.html'>طلبات خاصة</a></li>
-                </ul>
-
-            </div>
+            <a href="orders.html" class="mobileLinks d-md-none">
+                <span class="icon-orders"></span>
+                <span>ادارة الطلبات</span>
+            </a>
 
             <a href="offers.html" class="mobileLinks d-md-none">
                 <span class="icon-Offers"></span>
@@ -124,7 +108,7 @@
                 <span>خدمة الحسابات المالية</span>
             </a>
 
-            <a href="delivery.html" class="mobileLinks d-md-none">
+            <a href="delivery.html" class="active mobileLinks d-md-none">
                 <span class="icon-delivery"></span>
                 <span>ادارة توصيل</span>
             </a>
@@ -202,24 +186,11 @@
                 </a>
             </li>
 
-            <li class="active sub-menu">
+            <li>
                 <a href="orders.html">
                     <span class="icon-orders"></span>
                     ادارة الطلبات
                 </a>
-                <ul>
-                    <li class="active sub-menu sub-subMenu">
-                        <a href='orders.html'>طلبات عادية</a>
-
-                        <ul>
-                            <li class="active"><a href='orders.html'>طلبات جديدة</a></li>
-                            <li><a href='normalInProgress.html'>طلبات قيد التنفيذ</a></li>
-                            <li><a href='normalFinished.html'>طلبات منتهية</a></li>
-                        </ul>
-
-                    </li>
-                    <li><a href='specialOrders.html'>طلبات خاصة</a></li>
-                </ul>
             </li>
 
             <li>
@@ -250,14 +221,14 @@
                 </a>
             </li>
 
-            <li >
+            <li>
                 <a href="financialAccounts.html">
                     <span class="icon-bar_chart"></span>
                     ادارة الحسابات المالية
                 </a>
             </li>
 
-            <li>
+            <li class="active">
                 <a href="delivery.html">
                     <span class="icon-delivery"></span>
                     ادارة توصيل
@@ -303,22 +274,9 @@
 
             </div>
 
-            <div class="notifications">
+            <div class="filterDiv flex-column flex-sm-row flex-wrap justify-content-center justify-content-sm-between">
 
-                <div class="headTitle bgWhite mb-3">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb m-0">
-                            <li class="breadcrumb-item"><a>ادارة الطلبات</a></li>
-                            <li class="breadcrumb-item"><a><i class='fas fa-chevron-left'></i>طلبات عادية</a></li>
-                            <li class="breadcrumb-item active" aria-current="page"><i class='fas fa-chevron-left'></i>طلبات جديدة</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
-
-            <div class="filterDiv flex-column flex-sm-row justify-content-center justify-content-sm-between">
-
-                <div class="d-flex align-items-center filterBox my-2 my-lg-0">
+                <div class="d-flex align-items-center filterBox my-2 my-xl-0">
                     <div class="custom-control custom-checkbox">
                         <input type="checkbox" class="custom-control-input" id="selectAll">
                         <label class="custom-control-label" for="selectAll">تحديد الكل</label>
@@ -330,120 +288,149 @@
                     </select>
                 </div>
 
-                <div class="filterSort my-2 my-lg-0">
-                    فلتر حسب نوع الطلب
-                    <select class="selectpicker" id="selectFilter">
-                        <option>الأحدث</option>
-                        <option>الاقدم</option>
+                <div class="filterSort my-2 my-xl-0">
+                    فلتر حسب
+                    <select class="selectpicker" id="area">
+                        <option>المنطقة</option>
                     </select>
                 </div>
 
-            </div>
+                <div class="filterSort my-2 my-xl-0">
+                    فلتر حسب
+                    <select class="selectpicker" id="city">
+                        <option>المدن</option>
+                    </select>
+                </div>
+
+                <a class="addMenu my-2 my-xl-0" href="addDelegate.html">
+                    <i class="fas fa-plus"></i>
+                </a>
+
+           </div>
 
             <div class="tableContainer">
-                <table id="ordersTable" class="display nowrap" >
+                <table id="productTable" class="display nowrap" >
                     <thead>
                     <tr>
                         <th></th>
-                        <th>رقم</th>
-                        <th>اسم العميل</th>
-                        <th>السعر الاجمالي</th>
-                        <th>الحالة</th>
-                        <th>التفاصيل</th>
+                        <th>الصورة</th>
+                        <th>اسم المندوب</th>
+                        <th>الجوال</th>
+                        <th>عدد الطلبات</th>
+                        <th>عمولة</th>
+                        <th>السعر المحصل</th>
                         <th></th>
                     </tr>
                     </thead>
                     <tbody>
 
-                    <tr>
-                        <td>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                <label class="custom-control-label" for="customCheck1"/>
-                            </div>
-                        </td>
-                        <td>1</td>
-                        <td>أماني قاسم</td>
-                        <td>60 رس</td>
-                        <td>جديدة</td>
-                        <td>
-                            <a href="normalOrderDetails.html">عرض التفاصيل</a>
-                        </td>
-                        <td>
-                            <a href="#" class="more">
-                                <span class="icon-more"></span>
-                            </a>
-                        </td>
-                    </tr>
+                        <tr>
+                            <td>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                    <label class="custom-control-label" for="customCheck1"/>
+                                </div>
+                            </td>
+                            <td>
+                                <a href="delegateDetails.html">
+                                    <img class="img-fluid" src="img/product.jpg" alt="product">
+                                </a>
+                            </td>
+                            <td>
+                                <a href="delegateDetails.html">اسم المندوب</a>
+                            </td>
+                            <td>0123456788</td>
+                            <td>20</td>
+                            <td>0 رس</td>
+                            <td>0 رس</td>
+                            <td>
+                                <a href="#" class="more">
+                                    <span class="icon-more"></span>
+                                </a>
+                            </td>
+                        </tr>
 
-                    <tr>
-                        <td>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck2">
-                                <label class="custom-control-label" for="customCheck2"/>
-                            </div>
-                        </td>
-                        <td>1</td>
-                        <td>أماني قاسم</td>
-                        <td>60 رس</td>
-                        <td>جديدة</td>
-                        <td>
-                            <a href="normalOrderDetails.html">عرض التفاصيل</a>
-                        </td>
-                        <td>
-                            <a href="#" class="more">
-                                <span class="icon-more"></span>
-                            </a>
-                        </td>
-                    </tr>
+                        <tr>
+                            <td>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                    <label class="custom-control-label" for="customCheck2"/>
+                                </div>
+                            </td>
+                            <td>
+                                <a href="delegateDetails.html">
+                                    <img class="img-fluid" src="img/product.jpg" alt="product">
+                                </a>
+                            </td>
+                            <td>
+                                <a href="delegateDetails.html">اسم المندوب</a>
+                            </td>
+                            <td>0123456788</td>
+                            <td>20</td>
+                            <td>0 رس</td>
+                            <td>0 رس</td>
+                            <td>
+                                <a href="#" class="more">
+                                    <span class="icon-more"></span>
+                                </a>
+                            </td>
+                        </tr>
 
-                    <tr>
-                        <td>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck3">
-                                <label class="custom-control-label" for="customCheck3"/>
-                            </div>
-                        </td>
-                        <td>1</td>
-                        <td>أماني قاسم</td>
-                        <td>60 رس</td>
-                        <td>جديدة</td>
-                        <td>
-                            <a href="normalOrderDetails.html">عرض التفاصيل</a>
-                        </td>
-                        <td>
-                            <a href="#" class="more">
-                                <span class="icon-more"></span>
-                            </a>
-                        </td>
-                    </tr>
+                        <tr>
+                            <td>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                    <label class="custom-control-label" for="customCheck3"/>
+                                </div>
+                            </td>
+                            <td>
+                                <a href="delegateDetails.html">
+                                    <img class="img-fluid" src="img/product.jpg" alt="product">
+                                </a>
+                            </td>
+                            <td>
+                                <a href="delegateDetails.html">اسم المندوب</a>
+                            </td>
+                            <td>0123456788</td>
+                            <td>20</td>
+                            <td>0 رس</td>
+                            <td>0 رس</td>
+                            <td>
+                                <a href="#" class="more">
+                                    <span class="icon-more"></span>
+                                </a>
+                            </td>
+                        </tr>
 
-                    <tr>
-                        <td>
-                            <div class="custom-control custom-checkbox">
-                                <input type="checkbox" class="custom-control-input" id="customCheck4">
-                                <label class="custom-control-label" for="customCheck4"/>
-                            </div>
-                        </td>
-                        <td>1</td>
-                        <td>أماني قاسم</td>
-                        <td>60 رس</td>
-                        <td>جديدة</td>
-                        <td>
-                            <a href="normalOrderDetails.html">عرض التفاصيل</a>
-                        </td>
-                        <td>
-                            <a href="#" class="more">
-                                <span class="icon-more"></span>
-                            </a>
-                        </td>
-                    </tr>
-
+                        <tr>
+                            <td>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                    <label class="custom-control-label" for="customCheck4"/>
+                                </div>
+                            </td>
+                            <td>
+                                <a href="delegateDetails.html">
+                                    <img class="img-fluid" src="img/product.jpg" alt="product">
+                                </a>
+                            </td>
+                            <td>
+                                <a href="delegateDetails.html">اسم المندوب</a>
+                            </td>
+                            <td>0123456788</td>
+                            <td>20</td>
+                            <td>0 رس</td>
+                            <td>0 رس</td>
+                            <td>
+                                <a href="#" class="more">
+                                    <span class="icon-more"></span>
+                                </a>
+                            </td>
+                        </tr>
 
                     </tbody>
                 </table>
             </div>
-
 
 
 
@@ -469,7 +456,7 @@
 <script src="js/scripts.js"></script>
 <script>
     $(document).ready(function() {
-        $('#ordersTable').DataTable( {
+        $('#productTable').DataTable( {
             "language": {
                 "paginate": {
                     "next": '<i class="fas fa-chevron-left"></i>',
@@ -488,9 +475,7 @@
 </script>
 <!--end select-->
 
-<script>
-    new WOW().init();
-</script>
+
 
 
 </body>

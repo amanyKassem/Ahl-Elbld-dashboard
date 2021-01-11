@@ -78,26 +78,10 @@
                 <span>ادارة المنتجات</span>
             </a>
 
-            <div class="active mobileLinks sub-menu d-md-none">
-
-                <a href="orders.html">
-                    <span class="icon-orders"></span>
-                    <span>ادارة الطلبات</span>
-                </a>
-
-                <ul>
-                    <li class="active sub-subMenu">
-                        <a href='orders.html'>طلبات عادية</a>
-                        <ul>
-                            <li class="active"><a href='orders.html'>طلبات جديدة</a></li>
-                            <li><a href='normalInProgress.html'>طلبات قيد التنفيذ</a></li>
-                            <li><a href='normalFinished.html'>طلبات منتهية</a></li>
-                        </ul>
-                    </li>
-                    <li><a href='specialOrders.html'>طلبات خاصة</a></li>
-                </ul>
-
-            </div>
+            <a href="orders.html" class="mobileLinks d-md-none">
+                <span class="icon-orders"></span>
+                <span>ادارة الطلبات</span>
+            </a>
 
             <a href="offers.html" class="mobileLinks d-md-none">
                 <span class="icon-Offers"></span>
@@ -129,7 +113,7 @@
                 <span>ادارة توصيل</span>
             </a>
 
-            <a href="fastingBreakfast.html" class="orangeBtn fastingBreakfast d-md-none">
+            <a href="fastingBreakfast.html" class="active orangeBtn fastingBreakfast d-md-none">
                 قسم افطار صائم
             </a>
 
@@ -202,24 +186,11 @@
                 </a>
             </li>
 
-            <li class="active sub-menu">
+            <li>
                 <a href="orders.html">
                     <span class="icon-orders"></span>
                     ادارة الطلبات
                 </a>
-                <ul>
-                    <li class="active sub-menu sub-subMenu">
-                        <a href='orders.html'>طلبات عادية</a>
-
-                        <ul>
-                            <li class="active"><a href='orders.html'>طلبات جديدة</a></li>
-                            <li><a href='normalInProgress.html'>طلبات قيد التنفيذ</a></li>
-                            <li><a href='normalFinished.html'>طلبات منتهية</a></li>
-                        </ul>
-
-                    </li>
-                    <li><a href='specialOrders.html'>طلبات خاصة</a></li>
-                </ul>
             </li>
 
             <li>
@@ -250,7 +221,7 @@
                 </a>
             </li>
 
-            <li >
+            <li>
                 <a href="financialAccounts.html">
                     <span class="icon-bar_chart"></span>
                     ادارة الحسابات المالية
@@ -265,7 +236,7 @@
             </li>
 
             <li>
-                <a href="fastingBreakfast.html" class="orangeBtn fastingBreakfast">
+                <a href="fastingBreakfast.html" class="orangeBtn fastingBreakfast active">
                     قسم افطار صائم
                 </a>
             </li>
@@ -308,17 +279,16 @@
                 <div class="headTitle bgWhite mb-3">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb m-0">
-                            <li class="breadcrumb-item"><a>ادارة الطلبات</a></li>
-                            <li class="breadcrumb-item"><a><i class='fas fa-chevron-left'></i>طلبات عادية</a></li>
-                            <li class="breadcrumb-item active" aria-current="page"><i class='fas fa-chevron-left'></i>طلبات جديدة</li>
+                            <li class="breadcrumb-item"><a>قسم افطار صائم</a></li>
+                            <li class="breadcrumb-item active" aria-current="page"><i class='fas fa-chevron-left'></i>طلبات علي القسم</li>
                         </ol>
                     </nav>
                 </div>
             </div>
 
-            <div class="filterDiv flex-column flex-sm-row justify-content-center justify-content-sm-between">
+            <div class="filterDiv flex-column flex-sm-row flex-wrap justify-content-center justify-content-sm-between">
 
-                <div class="d-flex align-items-center filterBox my-2 my-lg-0">
+                <div class="d-flex align-items-center filterBox my-2 my-xl-0">
                     <div class="custom-control custom-checkbox">
                         <input type="checkbox" class="custom-control-input" id="selectAll">
                         <label class="custom-control-label" for="selectAll">تحديد الكل</label>
@@ -330,13 +300,16 @@
                     </select>
                 </div>
 
-                <div class="filterSort my-2 my-lg-0">
-                    فلتر حسب نوع الطلب
-                    <select class="selectpicker" id="selectFilter">
-                        <option>الأحدث</option>
-                        <option>الاقدم</option>
+                <div class="filterSort my-2 my-xl-0">
+                    فلتر حسب المنطقة
+                    <select class="selectpicker" id="area">
+                        <option>المدينة</option>
                     </select>
                 </div>
+
+                <a class="addMenu my-2 my-xl-0" href="addEvent.html">
+                    <i class="fas fa-plus"></i>
+                </a>
 
             </div>
 
@@ -348,7 +321,7 @@
                         <th>رقم</th>
                         <th>اسم العميل</th>
                         <th>السعر الاجمالي</th>
-                        <th>الحالة</th>
+                        <th>تاريخ الحدث</th>
                         <th>التفاصيل</th>
                         <th></th>
                     </tr>
@@ -365,9 +338,9 @@
                         <td>1</td>
                         <td>أماني قاسم</td>
                         <td>60 رس</td>
-                        <td>جديدة</td>
+                         <td>9/7/2021</td>
                         <td>
-                            <a href="normalOrderDetails.html">عرض التفاصيل</a>
+                            <a href="eventDetails.html">عرض التفاصيل</a>
                         </td>
                         <td>
                             <a href="#" class="more">
@@ -386,9 +359,9 @@
                         <td>1</td>
                         <td>أماني قاسم</td>
                         <td>60 رس</td>
-                        <td>جديدة</td>
+                         <td>9/7/2021</td>
                         <td>
-                            <a href="normalOrderDetails.html">عرض التفاصيل</a>
+                            <a href="eventDetails.html">عرض التفاصيل</a>
                         </td>
                         <td>
                             <a href="#" class="more">
@@ -407,9 +380,9 @@
                         <td>1</td>
                         <td>أماني قاسم</td>
                         <td>60 رس</td>
-                        <td>جديدة</td>
+                         <td>9/7/2021</td>
                         <td>
-                            <a href="normalOrderDetails.html">عرض التفاصيل</a>
+                            <a href="eventDetails.html">عرض التفاصيل</a>
                         </td>
                         <td>
                             <a href="#" class="more">
@@ -428,9 +401,9 @@
                         <td>1</td>
                         <td>أماني قاسم</td>
                         <td>60 رس</td>
-                        <td>جديدة</td>
+                         <td>9/7/2021</td>
                         <td>
-                            <a href="normalOrderDetails.html">عرض التفاصيل</a>
+                            <a href="eventDetails.html">عرض التفاصيل</a>
                         </td>
                         <td>
                             <a href="#" class="more">
@@ -443,7 +416,6 @@
                     </tbody>
                 </table>
             </div>
-
 
 
 
@@ -488,9 +460,7 @@
 </script>
 <!--end select-->
 
-<script>
-    new WOW().init();
-</script>
+
 
 
 </body>
