@@ -15,7 +15,7 @@
     <link href="css/icomoon.css" rel="stylesheet"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&display=swap" rel="stylesheet">
-<!--        <link href="css/styleRTL.css" rel="stylesheet" />-->
+    <!--    <link href="css/styleRTL.css" rel="stylesheet" />-->
 
 </head>
 <body>
@@ -27,6 +27,7 @@
 </div>
 
 <!-- End Loading Page -->
+
 
 <!--  Start Header  -->
 
@@ -64,7 +65,7 @@
                 <span>الاشعارات</span>
             </a>
 
-            <a href="emails.html" class="active mobileLinks email d-md-none">
+            <a href="emails.html" class="mobileLinks email d-md-none">
                 <span class="icon-email"></span>
                 <span>المراسلات</span>
             </a>
@@ -109,7 +110,7 @@
                 <span>ادارة توصيل</span>
             </a>
 
-            <a href="fastingBreakfast.html" class="orangeBtn fastingBreakfast d-md-none">
+            <a href="fastingBreakfast.html" class="active orangeBtn fastingBreakfast d-md-none">
                 قسم افطار صائم
             </a>
 
@@ -127,7 +128,7 @@
 
             <div class="leftDiv d-flex align-items-center">
 
-                <a href="emails.html" class="email emailActive d-none d-md-flex">
+                <a href="emails.html" class="email d-none d-md-flex">
                     <span class="icon-email"></span>
                 </a>
 
@@ -232,7 +233,7 @@
             </li>
 
             <li>
-                <a href="fastingBreakfast.html" class="orangeBtn fastingBreakfast">
+                <a href="fastingBreakfast.html" class="orangeBtn fastingBreakfast active">
                     قسم افطار صائم
                 </a>
             </li>
@@ -273,62 +274,82 @@
             <div class="notifications">
 
                 <div class="headTitle bgWhite mb-3">
-                    <h3>المراسلات</h3>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb m-0">
+                            <li class="breadcrumb-item"><a href="fastingBreakfast.html">قسم افطار صائم</a></li>
+                            <li class="breadcrumb-item active" aria-current="page"><i class='fas fa-chevron-left'></i>اضافة ايفينت</li>
+                        </ol>
+                    </nav>
                 </div>
+            </div>
 
-                <a href="conversation.html" class="noti">
+            <div class="filterDiv flex-column p-lg-5">
+                <form class="settingForm" action="fastingBreakfast.html">
 
-                    <div class="notiHead">
-                        <h5>اسم المحادثة</h5>
-                        <span>9/7/2019</span>
+                    <div class="d-flex justify-content-between align-items-center flex-wrap w-100">
+                        <div class="form-group w-49">
+                            <label for="name">اسم المنتج</label>
+                            <input type="text" class="form-control" id="name" >
+                        </div>
+                        <div class="form-group w-49">
+                            <label for="price">سعر الوجبة</label>
+                            <input type="text" class="form-control" id="price" >
+                        </div>
                     </div>
 
-                    <p>
-                        هذا النص هو مثال لنص يمكن ان يستبدل بنص اخر في نفس المساحة هذا النص هو مثال لنص يمكن ان يستبدل بنص اخر في نفس المساحة هذا النص هو مثال لنص يمكن ان يستبدل بنص اخر في نفس المساحة
-                    </p>
-
-                </a>
-
-                <a href="conversation.html" class="noti">
-
-                    <div class="notiHead">
-                        <h5>اسم المحادثة</h5>
-                        <span>9/7/2019</span>
+                    <div class="form-group">
+                        <label for="location">الموقع</label>
+                        <input type="text" class="form-control" id="location" disabled>
+                        <a class="locImg" data-toggle="modal" data-target="#exampleModalCenter">
+                            <img src="img/pin.png" alt="location">
+                        </a>
                     </div>
 
-                    <p>
-                        هذا النص هو مثال لنص يمكن ان يستبدل بنص اخر في نفس المساحة هذا النص هو مثال لنص يمكن ان يستبدل بنص اخر في نفس المساحة هذا النص هو مثال لنص يمكن ان يستبدل بنص اخر في نفس المساحة
-                    </p>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content p-0 px-sm-4 py-sm-2">
+                                <div class="modal-header border-0">
+                                    <h5 class="modal-title" id="exampleModalLongTitle">ادخل موقعك</h5>
+                                </div>
+                                <div class="modal-body py-0">
+                                    <div id="map"></div>
+                                    <input type="hidden" name="latitude" id="latitude">
+                                    <input type="hidden" name="longitude" id="longitude">
+                                    <div class="searchCont">
+                                        <input id="searchTextField" type="text" placeholder="ابحث عن موقعك">
+                                        <span class="icon-search"></span>
+                                    </div>
 
-                </a>
-
-                <a href="conversation.html" class="noti">
-
-                    <div class="notiHead">
-                        <h5>اسم المحادثة</h5>
-                        <span>9/7/2019</span>
+                                    <a class="orangeBtn getLoc w-75 my-5 mx-auto" data-dismiss="modal">حفظ</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <p>
-                        هذا النص هو مثال لنص يمكن ان يستبدل بنص اخر في نفس المساحة هذا النص هو مثال لنص يمكن ان يستبدل بنص اخر في نفس المساحة هذا النص هو مثال لنص يمكن ان يستبدل بنص اخر في نفس المساحة
-                    </p>
 
-                </a>
 
-                <a href="conversation.html" class="noti">
-
-                    <div class="notiHead">
-                        <h5>اسم المحادثة</h5>
-                        <span>9/7/2019</span>
+                    <div class="d-flex justify-content-between align-items-center flex-wrap w-100">
+                        <div class="form-group w-49">
+                            <label for="date">تاريخ الحدث</label>
+                            <input type="text" class="form-control" id="date" >
+                        </div>
+                        <div class="form-group w-49">
+                            <label for="time">توقيت الحدث</label>
+                            <input type="text" class="form-control" id="time" >
+                        </div>
                     </div>
 
-                    <p>
-                        هذا النص هو مثال لنص يمكن ان يستبدل بنص اخر في نفس المساحة هذا النص هو مثال لنص يمكن ان يستبدل بنص اخر في نفس المساحة هذا النص هو مثال لنص يمكن ان يستبدل بنص اخر في نفس المساحة
-                    </p>
+                    <div class="form-group w-100">
+                        <label for="details">تفاصيل الحدث</label>
+                        <textarea class="form-control" id="details" rows="6" placeholder="اكتب نص الحدث"></textarea>
+                    </div>
 
-                </a>
+                    <button type="submit" class="orangeBtn w-75 my-5">حفظ</button>
+                </form>
 
             </div>
+
 
         </div>
     </div>
@@ -347,10 +368,80 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/wow.min.js"></script>
 <script src="js/scripts.js"></script>
+<!--start map-->
 <script>
-    new WOW().init();
+    function initMap() {
+        // if (navigator.geolocation) {
+        //     navigator.geolocation.getCurrentPosition(function (p) {
+        // var  lat = p.coords.latitude ;
+        // var  lng = p.coords.longitude;
+        var  lat = 31.13323 ;
+        var  lng = 31.21344;
+        const myLatlng = {
+            lat: lat,
+            lng: lng
+        };
+        const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 10,
+            center: myLatlng,
+            mapTypeControl: false,
+            streetViewControl: false,
+        });
+        $('#latitude').val(lat)
+        $('#longitude').val(lng)
+        var input = document.getElementById('searchTextField');
+        var autocomplete = new google.maps.places.Autocomplete(input);
+        const geocoder = new google.maps.Geocoder();
+        document.getElementById("searchTextField").addEventListener("keyup", () => {
+            geocodeAddress(geocoder, map);
+        });
+        document.getElementById("searchTextField").addEventListener("change", () => {
+            geocodeAddress(geocoder, map);
+        });
+        var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(lat, lng),
+            map: map,
+            title: 'Set lat/lon values for this property',
+            streetViewControl: false,
+            // draggable: true,
+            icon: {
+                url: 'img/map.png',
+            },
+        });
+
+        //     });
+        // }
+    }
+
+    function geocodeAddress(geocoder, resultsMap) {
+        const address = document.getElementById("searchTextField").value;
+        geocoder.geocode({ address: address }, (results, status) => {
+            if (status === "OK") {
+                $('#latitude').val(results[0].geometry.location.lat())
+                $('#longitude').val(results[0].geometry.location.lng())
+                resultsMap.setCenter(results[0].geometry.location);
+                new google.maps.Marker({
+                    zoom: 4,
+                    map: resultsMap,
+                    position: results[0].geometry.location,
+                    streetViewControl: false,
+                });
+            } else {
+                // alert("Geocode was not successful for the following reason: " + status);
+            }
+        });
+    }
 </script>
-
-
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDqUJp5NG7f4wHZIThgvqYdd7r9Lq5PcU&callback=initMap&libraries=places&language='{{lang()}}'" type="text/javascript"></script>
+<!--end map-->
+<script>
+    $(document).ready(function () {
+        $("#searchTextField").bind("keypress", function (e) {
+            if (e.keyCode == 13) {
+                return false;
+            }
+        });
+    });
+</script>
 </body>
 </html>

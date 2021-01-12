@@ -1926,6 +1926,11 @@ body {
   margin-right: 25px;
   font-weight: bold;
 }
+.dashContent .content .container .productContainer .infoCont .info .proName span i {
+  color: #FCA003;
+  font-size: 15px;
+  margin-left: 15px;
+}
 .dashContent .content .container .productContainer .infoCont .info .proName .custom-switch {
   padding-left: 70px;
 }
@@ -1988,7 +1993,7 @@ body {
 }
 .dashContent .content .container .productContainer .infoCont .info h4.comp {
   margin: 20px 0 25px;
-  font-size: 20px;
+  font-size: 18px;
   color: #414141;
 }
 .dashContent .content .container .productContainer .infoCont .info .price {
@@ -2004,7 +2009,7 @@ body {
   margin-right: 15px;
 }
 .dashContent .content .container .productContainer .infoCont .info p {
-  font-size: 18px;
+  font-size: 16px;
   color: #7e8082;
 }
 .dashContent .content .container .productContainer .infoCont .info .custom-checkbox {

@@ -1,7 +1,8 @@
+
 $lightGray: #a7a7a7;
 $gray: #535455;
 $midGray: #7e8082;
-$black: #2D2D2D;
+$black: #414141;
 $orange: #FCA003;
 $bgGray: #e4e4e4;
 
@@ -20,6 +21,9 @@ body {
   left: auto;
 }
 
+.mr-0, .mx-0 {
+  margin-left: 0!important;
+}
 
 .mr-1, .mx-1 {
   margin-right: 0!important;
@@ -63,6 +67,20 @@ form {
     }
   }
 }
+
+
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn), .bootstrap-select > .dropdown-toggle {
+
+  .dropdown-menu {
+    li {
+
+      a {
+        text-align: left;
+      }
+    }
+  }
+}
+
 
 .toggleSideMenu {
   transform: rotate(-180deg);
@@ -111,10 +129,6 @@ form {
 
 
       .lang {
-        border-left: 0;
-        border-right: 1px solid #6b6b6b;
-        padding-left: 0;
-        padding-right: 20px;
         .icon-language {
           margin-right: 10px;
           margin-left: 0;
@@ -199,12 +213,27 @@ form {
 
       .filterDiv{
 
+        .tabContent{
+          .onlineInfo {
+            img {
+              margin-right: 15px;
+              margin-left: auto;
+            }
+          }
+        }
+
         .settingForm {
           .form-group{
             img {
               right: 12px;
               left: auto;
             }
+
+            .icon-photo_camera {
+              right: 20px;
+              left: auto;
+            }
+
           }
         }
 
@@ -309,16 +338,6 @@ form {
         }
 
         .noti{
-
-          .notiHead {
-            .title {
-              span {
-                margin-left: 40px;
-                margin-right: 0;
-              }
-            }
-          }
-
           &.rate{
             img {
               margin-right: 20px;
@@ -360,6 +379,23 @@ form {
                   right: auto;
                   left: 0;
                 }
+              }
+            }
+
+            .proName {
+              span {
+                i {
+                  margin-right: 15px;
+                  margin-left: auto;
+                }
+              }
+            }
+
+
+            .price {
+              span {
+                margin-left: 15px;
+                margin-right: auto;
               }
             }
           }
@@ -423,6 +459,13 @@ form {
                   border-left: 0;
 
                 }
+
+                &.sub-subMenu {
+                  ul {
+                    margin: 15px 0 15px 15px;
+                  }
+                }
+
               }
 
             }
@@ -441,9 +484,9 @@ form {
             padding-right: 0;
           }
 
-          &.notifications{
+          &.notifications , &.email{
             &:after{
-             left: 0;
+              left: 0;
               right: auto;
             }
           }
@@ -474,7 +517,7 @@ form {
           .noti{
             &.rate {
               img {
-                margin: 0 0 20px;
+                margin: 0 auto 20px;
               }
             }
           }

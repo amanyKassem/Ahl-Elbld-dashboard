@@ -12,6 +12,10 @@ body {
   left: auto;
 }
 
+.mr-0, .mx-0 {
+  margin-left: 0 !important;
+}
+
 .mr-1, .mx-1 {
   margin-right: 0 !important;
   margin-left: 0.25rem !important;
@@ -51,6 +55,10 @@ form .form-group .form-control {
   text-align: left;
 }
 
+.bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) .dropdown-menu li a, .bootstrap-select > .dropdown-toggle .dropdown-menu li a {
+  text-align: left;
+}
+
 .toggleSideMenu {
   transform: rotate(-180deg);
 }
@@ -79,12 +87,6 @@ form .form-group .form-control {
 .dashHeader .container .menu .leftDiv .profile ul {
   left: -75px;
   right: auto;
-}
-.dashHeader .container .menu .lang {
-  border-left: 0;
-  border-right: 1px solid #6b6b6b;
-  padding-left: 0;
-  padding-right: 20px;
 }
 .dashHeader .container .menu .lang .icon-language {
   margin-right: 10px;
@@ -136,8 +138,16 @@ form .form-group .form-control {
   margin-right: 30px;
   margin-left: 0;
 }
+.dashContent .content .container .filterDiv .tabContent .onlineInfo img {
+  margin-right: 15px;
+  margin-left: auto;
+}
 .dashContent .content .container .filterDiv .settingForm .form-group img {
   right: 12px;
+  left: auto;
+}
+.dashContent .content .container .filterDiv .settingForm .form-group .icon-photo_camera {
+  right: 20px;
   left: auto;
 }
 .dashContent .content .container .filterDiv .sellsInfo ul li {
@@ -193,10 +203,6 @@ form .form-group .form-control {
   border-left: 18px solid #f29f33;
   border-right: 0;
 }
-.dashContent .content .container .notifications .noti .notiHead .title span {
-  margin-left: 40px;
-  margin-right: 0;
-}
 .dashContent .content .container .notifications .noti.rate img {
   margin-right: 20px;
   margin-left: 0;
@@ -224,6 +230,14 @@ form .form-group .form-control {
 .dashContent .content .container .productContainer .infoCont .info .custom-checkbox .custom-control-label::before, .dashContent .content .container .productContainer .infoCont .info .custom-checkbox .custom-control-label::after {
   right: auto;
   left: 0;
+}
+.dashContent .content .container .productContainer .infoCont .info .proName span i {
+  margin-right: 15px;
+  margin-left: auto;
+}
+.dashContent .content .container .productContainer .infoCont .info .price span {
+  margin-left: 15px;
+  margin-right: auto;
 }
 
 @media (max-width: 767px) {
@@ -259,6 +273,9 @@ form .form-group .form-control {
   .dashHeader .container .menu .mobileLinks.sub-menu ul li:hover > a, .dashHeader .container .menu .mobileLinks.sub-menu ul li.active > a {
     border-left: 0;
   }
+  .dashHeader .container .menu .mobileLinks.sub-menu ul li.sub-subMenu ul {
+    margin: 15px 0 15px 15px;
+  }
   .dashHeader .container .menu .mobileLinks span:first-child {
     margin-right: 10px;
     margin-left: 0;
@@ -267,7 +284,7 @@ form .form-group .form-control {
     border-right: 0;
     padding-right: 0;
   }
-  .dashHeader .container .menu .mobileLinks.notifications:after {
+  .dashHeader .container .menu .mobileLinks.notifications:after, .dashHeader .container .menu .mobileLinks.email:after {
     left: 0;
     right: auto;
   }
@@ -280,7 +297,7 @@ form .form-group .form-control {
     margin-right: 15px;
   }
   .dashContent .content .container .notifications .noti.rate img {
-    margin: 0 0 20px;
+    margin: 0 auto 20px;
   }
   .dashContent .content .container .filterDiv .orangeBtn.grayBtn {
     margin-left: 0;

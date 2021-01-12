@@ -2396,6 +2396,15 @@ body {
                   color: $lightGray;
                   margin-right: 25px;
                   font-weight: bold;
+
+                }
+              }
+
+              span{
+                i{
+                  color: $orange ;
+                  font-size: 15px;
+                  margin-left: 15px;
                 }
               }
 
@@ -2478,7 +2487,7 @@ body {
 
               &.comp {
                 margin: 20px 0 25px;
-                font-size: 20px;
+                font-size: 18px;
                 color: $black;
               }
             }
@@ -2498,7 +2507,7 @@ body {
             }
 
             p{
-              font-size: 18px;
+              font-size: 16px;
               color: $midGray;
             }
 
@@ -3592,6 +3601,7 @@ body {
                   font-size: 15px;
                   line-height: 27px;
                 }
+
               }
 
               .custom-checkbox {
