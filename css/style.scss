@@ -179,7 +179,7 @@ textarea{
 .customHr {
   width: 100%;
   margin: 35px 0;
-  border: 1px solid #f3f3f3;
+  border: 1px solid #e1e1e1;
 }
 
 a,
@@ -1382,7 +1382,7 @@ body {
 
           }
 
-          &#addProduc , &#addAddition{
+          &#editPro , &#addAddition{
             .modal-content {
               padding: 0;
               border: 0;
@@ -3293,7 +3293,7 @@ body {
               min-width: unset !important;
             }
 
-            &#addProduc , &#addAddition {
+            &#editPro , &#addAddition {
               .modal-content {
                 .modal-header {
                   padding: 15px 20px;
